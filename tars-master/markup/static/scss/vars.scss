@@ -1,0 +1,55 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i,800&subset=cyrillic-ext');
+@import url('https://cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css');
+
+$font-base:   "Open Sans', sans-serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+
+// Media queries
+$mq-breakpoints: (
+  'xs': 767px,
+  'sm': 768px,
+  'md': 1110px
+);
+
+// Container
+$mq-container-widths: (
+  'xs': 100%,
+  'sm': 100%,
+  'md': 1110px
+);
+
+$mq-container-indents: (
+  'xs': 1rem,
+  'sm': 1.5rem,
+  'md': 3rem
+);
+
+// Grid
+$mq-grid-gutters: (
+  'xs': 2rem,
+  'sm': 2rem,
+  'md': 3rem
+);
+
+
+// Colors
+$color-brand: #0b4fa3;
+$color-brand2: #96cd00;
+$color-base: #121212;
+$color-base-light: #747474;
+$color-base-lighter: #b5b5b5;
+$color-bg-alternate: #eeefef;
+//$color-base-lighter: #a9c2c8;
+//$color-base-lightest: #e9f1f2;
+//$color-alert: #f9b238;
+
+// Transitions
+$transition-duration-base: .2s;
+
+// Styles
+$border-radius-small: .8rem;
+$border-radius-base:  1.2rem;
+$border-radius-large: 1.6rem;
+$border-radius-huge:  2rem;

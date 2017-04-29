@@ -1,0 +1,22 @@
+input,
+textarea,
+button,
+label {
+  box-sizing: border-box !important;
+  outline: none !important;
+}
+
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+textarea {
+  @include placeholder {
+    color: $color-base-lighter;
+  }
+}

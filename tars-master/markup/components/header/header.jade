@@ -1,0 +1,30 @@
+mixin header()
+  .header
+    .container
+    
+      .header__line-top
+        a.header__logo-box(href='#')
+          .header__logo-image
+            img(src='static/img/general/logo.jpg' alt='ФомЛайн')
+          .header__logo-description Крупнейший российский производитель<br>эластичного пенополиуретана
+        .header__switch-box
+          form.header__search-block
+            input(type='search' placeholder='Поиск')
+            button
+              i.mdi.mdi-magnify
+              
+          .header__lang-box.js-lang-box
+            ul.header__lang-switch.js-lang-switch
+              li.header__lang-switch-item(data-active='true')
+                a(href='#') Rus
+              li.header__lang-switch-item
+                a(href='#') Eng
+              li.header__lang-switch-item
+                a(href='#') Sp  
+                
+      +navigate()
+                
+                
+              
+
+    

@@ -1,0 +1,37 @@
+@import '../normalize.scss';
+
+//config
+$enable-mq-device: false;
+// functions
+
+// Half
+@function half($value) {
+  @return $value / 2;
+}
+
+/* Libraries, which is used in current project. */
+@import 'partials/_libraries.scss';
+
+@import '../vars.scss';
+
+@import '../mixins.scss';
+
+@import '../_layout.scss';
+
+@import '../helpers.scss';
+
+@import '../common.scss';
+
+
+/* Libraries, which is used in current project. */
+@import 'built-in-partials/_service.scss';
+
+/* Plugins, which is used in current project. */
+@import 'partials/_plugins.scss';
+
+/* Components, which is used in current project. */
+@import 'partials/_components.scss';
+
+/* Additional style files. */
+@import '../etc/etc.scss';
+

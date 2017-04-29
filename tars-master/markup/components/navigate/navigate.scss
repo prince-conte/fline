@@ -1,0 +1,62 @@
+.navigate {
+  padding: 1rem 0;
+  
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__menu-item {
+    text-align: center;
+         
+    &:hover {    
+      a {
+        color: $color-brand;
+//        border-color: $color-brand;
+        
+        &:before,
+        &:after {
+          width: 100%;
+        }
+      }
+    }    
+    
+    a {
+      @include font(1.4rem, 1.4rem);
+      position: relative;
+      display: inline-block;
+      padding-bottom: .4rem;
+      border-bottom: .3rem solid transparent;
+      color: $color-base;
+      font-weight: 700;
+      text-transform: uppercase;
+      
+      &:before,
+      &:after {
+        position: absolute;
+        display: block;
+        bottom: -.3rem;
+        width: 0;
+        height: .3rem;
+        background: $color-brand;
+        transition: $transition-duration-base;
+        content: '';
+      }
+      
+      &:before {
+        left: 50%;
+        transform: translate(-50%,0);
+      }      
+      &:after {
+        right: 50%;
+        transform: translate(50%,0);
+      }
+      
+    }
+  }
+  
+  
+    
+    
+  
+}

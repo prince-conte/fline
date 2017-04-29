@@ -1,0 +1,8 @@
+.container {
+  @include container();
+}
+
+::selection {
+  color: #fff;
+  background: $color-brand;
+}

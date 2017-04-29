@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+// 1. Properties for sticky footer
+
+// Html
+html {
+  height: 100%; // 1
+  font-size: 62.5%;
+  //-webkit-font-smoothing: antialiased;
+}
+
+// Body
+body {
+  position: relative; // 1
+  min-height: 100%;   // 1
+  background: #fff;
+  font-size: 62.5%;
+  color: $color-base;
+  font-family: $font-base;
+  box-sizing: border-box;
+}
+
+// Links
+a {
+  @include hover(color, $color-brand);
+  transition: $transition-duration-base;
+  color: $color-brand;
+  text-decoration: none;
+  outline: none;
+}
+
+// B
+b {
+  font: {
+    weight: 700;
+  }
+}
+
+// Blockquote
+blockquote {
+  margin: 0;
+}
+
+// Fieldset
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+// Figure
+figure {
+  margin: 0;
+}
+
+// Images
+img {
+  max-width: 100%;
+
+  &[width],
+  &[height] {
+    max-width: none;
+  }
+}
+
+// Lists
+dl, dd,
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Paragraph
+p {
+  margin: 0;
+  @include font(1.8rem, 2.6rem);
+}
+
+// Small
+small {
+  @include text-small;
+}
+
+// Table
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Textarea
+textarea {
+  resize: none;
+}
+

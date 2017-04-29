@@ -1,0 +1,205 @@
+.header {
+  box-shadow: 0px 1px 5px 0px rgba(202, 202, 202, 0.57);
+  z-index: 100;
+
+  
+  &__line-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.2rem 0;
+    
+    @include mq(md) {
+      padding: 3rem 0;
+    }
+  }
+  
+  &__logo-box {
+    @include mq(md) {
+      display: flex;
+    } 
+  }
+  
+  &__logo-image {
+    
+    @include mq(md) {
+      padding-right: 1.5rem;     
+    }
+    
+    
+    > img {
+      vertical-align: top;
+      width: auto;
+      height: auto
+    }
+    
+  }
+  
+  &__logo-description {
+    @include font(1.3rem, 1.8rem);
+    text-align: center;
+    color: $color-base-light;
+    
+    @include mq(md) {
+      padding: .3rem 1.5rem 0;
+      border-left: 1px solid #e7e7e7;
+      text-align: left;
+    }
+    
+  }
+  
+  &__switch-box {
+    @include mq(md) {
+      display: flex;
+    }  
+  }
+  
+  &__search-block {
+    position: relative;
+    display: none;
+    
+    @include mq(md) {
+      display: block;
+      width: 35rem;
+    }   
+    
+    > input {
+      @include font(1.3rem, 1.3rem);
+      display: block;
+      padding: 1.2rem 5rem 1.1rem 1.5rem;
+      width: inherit;
+      border: 1px solid $color-base-lighter;
+      color: $color-base;   
+    }
+    
+    > button {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      height: 100%;
+      padding: 1.2rem 1.5rem 1.1rem;
+      color: $color-brand2;
+      
+      &:hover {
+        color: $color-brand;
+      }
+      
+      > i {
+        @include font(2rem, 2rem);
+      }
+    }   
+  }
+  
+  &__lang-box {
+    position: relative;
+    margin-left: 3.2rem;
+    z-index: 105;
+  }
+  
+  &__lang-switch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    border-bottom: 0;
+
+    &:hover {
+      border-color: $color-base;
+      
+          
+      &:before {
+        transform: rotate(180deg);
+      }
+
+      > li {
+        display: block;
+
+        &:not(last-child) {
+          border-color: $color-base;
+          padding: 1.3rem 2.3rem 1.1rem 1.3rem;
+        }
+
+        &:hover {
+          background: $color-base;
+          a {
+            color: #fff;
+          }
+
+        }
+      }
+    }
+    
+    &:before {
+      content: "\F140";
+      display: inline-block;
+      font: normal normal normal 24px/1 "Material Design Icons";
+      font-size: inherit;
+      text-rendering: auto;
+      line-height: inherit;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      @include font(1.6rem, 1.6rem);
+      position: absolute;
+      display: block;
+      top: 1.3rem;
+      right: .1rem;
+      color: $color-brand;
+    }
+    
+  
+  }
+  
+  &__lang-switch-item {
+    @include font(1.4rem, 1.4rem);
+    display: none;
+    order: 2;
+    background: #fff;
+    
+    &:not(last-child) {
+      padding: 1.3rem 2.3rem 1.1rem 1.3rem;
+      border-bottom: 1px solid transparent;
+      
+    }
+    
+    a {
+      @include font(1.4rem, 1.4rem);
+      pointer-events: none;
+      color: $color-base;
+      transition: 0;
+    }
+     
+    
+  }
+    
+  &__lang-switch-item[data-active="true"] {
+    display: block;
+    order: 1;
+  }
+  
+  // for lang switch
+
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
