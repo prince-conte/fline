@@ -1,6 +1,5 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i,800&subset=cyrillic-ext');
-@import url('https://cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css');
 
 $font-base:   "Open Sans', sans-serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -41,6 +40,9 @@ $color-base: #121212;
 $color-base-light: #747474;
 $color-base-lighter: #b5b5b5;
 $color-bg-alternate: #eeefef;
+
+$color-f-border: #e0e1e1;
+
 //$color-base-lighter: #a9c2c8;
 //$color-base-lightest: #e9f1f2;
 //$color-alert: #f9b238;

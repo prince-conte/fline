@@ -1,0 +1,280 @@
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: $color-bg-alternate;
+  
+  &__navigate {
+    border-bottom: 1px solid $color-f-border;
+  }
+  
+  
+  &__navigate-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__navigate-menu-item {
+    text-align: center;
+    
+      &:not(:first-child) {
+        a {
+          padding: 2.5rem 0 2rem;
+        }
+
+      }
+      
+      &:first-child {
+        a {
+          padding: 1.5rem 0 1.5rem;
+        }
+
+      }
+    
+    
+    &:hover {
+      
+      &:not(:first-child) {
+        a {
+          color: $color-brand;
+  //        border-color: $color-brand;
+
+          &:before,
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    
+    
+    a {
+      @include font(1.4rem, 1.4rem);
+      position: relative;
+      display: inline-block;
+      color: $color-base;
+      font-weight: 700;
+      text-transform: uppercase;
+      
+      &:before,
+      &:after {
+        position: absolute;
+        display: block;
+        bottom: -.1rem;
+        width: 0;
+        height: .3rem;
+        background: $color-brand;
+        transition: $transition-duration-base;
+        content: '';
+      }
+      
+      &:before {
+        left: 50%;
+        transform: translate(-50%,0);
+      }      
+      &:after {
+        right: 50%;
+        transform: translate(50%,0);
+      }
+      
+    }
+    
+    img {
+      vertical-align: top;
+      max-width: 100%;
+    }
+  }
+  
+  
+  &__production-menu-container {
+    
+    border-bottom: 1px solid $color-f-border;
+
+    @include mq(md) {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 4rem 0 3.9rem;
+    }  
+    
+  }
+  
+  &__prodiction-menu-box {
+    width: 52%;
+    
+    @include mq(md) {
+      @include grid();
+      flex-wrap: nowrap;
+    } 
+    
+    &--min {
+      width: 48%;
+    }
+    
+
+    
+  }
+    
+  &__production-menu-item {
+    
+    @include mq(md) {
+      @include grid-cols(1,2);   
+      @include grid-col();   
+    }
+
+    
+    > h5 {
+      @include mq(md) {
+        margin-bottom: 2rem;
+      } 
+    }
+    
+      
+    ul {
+      display: none;
+      
+      @include mq(md) {
+        display: block;
+      }
+    }
+    
+    li {
+      
+      a {
+        @include font(1.3rem,1.6rem);
+        @include hover(color, $color-brand);
+        color: $color-base;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+    }
+    
+    
+  }
+  
+  &__information-block {
+    
+  }
+  
+  &__information-block-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.9rem 0 4rem;
+    border-bottom: 1px solid $color-f-border;
+    
+    @include mq(md) {
+      flex-direction:row;
+      justify-content: space-between;
+      padding: 3.9rem 0 4rem;
+    }
+  }
+  
+  &__feedback-link {
+    @include font(1.8rem, 4rem);
+    display: inline-block;
+    margin-left: 3rem;
+    color: $color-brand;
+    
+    i {
+      @include font(2.4rem, 2.4rem);
+      position: relative;
+      top:.2rem;
+    }
+    
+    span {
+      text-decoration: underline;
+    }
+  }
+  
+  &__social-link-block {
+    display: flex;
+    align-items: center;
+    
+    @include mq(md) {
+        margin: 0 5rem;
+    }
+    
+    a {
+      
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+        }
+
+      i {
+        color: $color-base-lighter;
+        
+        @include mq(md) {
+          @include font(2rem,2rem);
+        }
+      }
+      
+      .mdi-facebook {
+        &:hover {
+          color: #3b5998;
+        }
+      }
+      .mdi-twitter {
+        &:hover {
+          color: #1da1f2;
+        }
+      }
+      .mdi-vk {
+        @include font(2.4rem,2.4rem);
+        
+        &:hover {
+          color: #507299
+        }
+      }
+      .mdi-instagram {
+        &:hover {
+          color: #bc307e
+        }
+      }
+      .mdi-google-plus {
+        @include font(2.4rem,2.4rem);
+        
+        &:hover {
+          color: #dd5044;
+        }
+      }
+    }   
+  }
+  
+  &__realweb {
+    @include font(1.3rem,4rem);
+    @include hover(color,$color-base);
+    font-family: Segoe,Segoe UI,Optima,Arial,sans-serif;
+    color: $color-base;
+    
+    b {
+      font-weight: 400;
+    }
+    
+    &:hover {
+      
+      b {
+        color: #0063c6;
+      }
+      
+      span {
+        color: #df0001;
+      }
+    }
+    
+    @include mq(md) {
+      margin-right: 5.5rem;
+    }
+  }
+  
+  &__copyright {
+    @include font(1.3rem,4rem);
+  }
+}
+
+
+
+
+

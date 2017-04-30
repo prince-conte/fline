@@ -18,6 +18,17 @@ body {
   color: $color-base;
   font-family: $font-base;
   box-sizing: border-box;
+  transition: .4s;
+}
+
+.page {
+  opacity: 0;
+  visibility: hidden
+}
+
+main {
+  min-height: 100%;
+  box-sizing: border-box;
 }
 
 // Links
@@ -70,6 +81,13 @@ ol, ul {
   padding: 0;
   list-style: none;
 }
+
+// Title
+
+h5 {
+  @include h5();
+}
+
 
 // Paragraph
 p {

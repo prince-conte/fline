@@ -1,2 +1,24 @@
 // GUI stylies of the project
 // For example, styles of the links, buttons and so on.
+
+
+// Texts
+@mixin text-small {
+  @include font(1.2rem, 1.5rem);
+}
+
+@mixin text-base {
+  @include font(1.4rem, 2rem);
+}
+
+@mixin text-large {
+  @include font(1.8rem, 2.5rem);
+}
+
+@mixin h5 {
+  @include font(1.8rem, 2.2rem);
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+

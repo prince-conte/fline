@@ -163,18 +163,7 @@
   @include transform(translate3d(0, 0, 0));
 }
 
-// Texts
-@mixin text-small {
-  @include font(1.2rem, 1.5rem);
-}
 
-@mixin text-base {
-  @include font(1.4rem, 2rem);
-}
-
-@mixin text-large {
-  @include font(1.8rem, 2.5rem);
-}
 
 
 @mixin nl {
