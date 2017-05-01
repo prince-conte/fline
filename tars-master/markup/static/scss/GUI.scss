@@ -8,11 +8,36 @@
 }
 
 @mixin text-base {
-  @include font(1.4rem, 2rem);
+  @include font(1.3rem, 1.4rem);
+  
+  @include mq(md) {
+    @include font(1.6rem, 2.4rem);
+  }
+  
+  a {
+    @include hover(color, $color-brand2);
+    color: $color-brand;
+    text-decoration: underline;
+  }
+  
+  
 }
 
 @mixin text-large {
   @include font(1.8rem, 2.5rem);
+}
+
+
+
+
+
+@mixin h2 {
+  font-size: 2.4rem;
+  font-weight: 300;
+
+  @include mq(md) { 
+    font-size: 4rem;
+  }
 }
 
 @mixin h5 {
@@ -22,3 +47,27 @@
   padding: 0;
 }
 
+// butons
+
+.gui-link-button {
+  @include font(1.3rem, 1.3rem);
+  @include hover(color, #fff);
+  @include hover(background, $color-brand);
+  padding: 1.2rem 3rem 1.1rem; 
+  display: inline-block;
+  border-radius: 4px;
+  color: #fff;
+  background-color: $color-brand2;
+  
+  
+  @include mq(md) {
+    @include font(1.6rem, 1.6rem);
+    padding: 1.7rem 3rem 1.6rem; 
+  } 
+  
+  i {
+    position: relative;
+    top: .1rem;
+  
+  }
+}

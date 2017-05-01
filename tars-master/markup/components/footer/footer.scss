@@ -161,6 +161,7 @@
   
   &__information-block-container {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     padding: 1.9rem 0 4rem;
     border-bottom: 1px solid $color-f-border;
@@ -177,6 +178,7 @@
     display: inline-block;
     margin-left: 3rem;
     color: $color-brand;
+    white-space: nowrap;
     
     i {
       @include font(2.4rem, 2.4rem);
@@ -192,6 +194,7 @@
   &__social-link-block {
     display: flex;
     align-items: center;
+    
     
     @include mq(md) {
         margin: 0 5rem;
@@ -248,6 +251,8 @@
     @include hover(color,$color-base);
     font-family: Segoe,Segoe UI,Optima,Arial,sans-serif;
     color: $color-base;
+    white-space: nowrap;
+
     
     b {
       font-weight: 400;
@@ -271,6 +276,8 @@
   
   &__copyright {
     @include font(1.3rem,4rem);
+    white-space: nowrap;
+
   }
 }
 

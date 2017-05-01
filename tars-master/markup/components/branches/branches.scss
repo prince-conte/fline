@@ -1,0 +1,58 @@
+.branches {
+  margin: 4rem 0;
+  
+  &__grid {
+    
+    @include mq(md) {  
+      @include grid();
+    }
+    
+  }
+  
+  &__content {
+    
+    @include mq(md) {  
+      @include grid-cols(1,2);
+      @include grid-col();
+      padding-top: 7rem;
+      
+      p {
+        padding-right: 6.5rem;
+      }
+    } 
+  }
+  
+  &__content-title {
+    @include h2();
+    margin-bottom: 1.5rem;
+    
+    @include mq(md) {
+      margin-bottom: 2rem;
+    }
+    
+  }
+  
+  &__content-reed-more {
+    margin-top: 1.5rem;
+    
+    @include mq(md) { 
+      margin-top: 4rem;
+    }
+    
+  }
+    
+  &__map {
+    
+    @include mq(md) {  
+      @include grid-cols(1,2);
+      @include grid-col();   
+    } 
+    
+    img {
+      @include mq(md) {  
+        max-width: none;
+        vertical-align: top;
+      }
+    }   
+  }
+}

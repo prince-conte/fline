@@ -1,5 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i,800&subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i&subset=cyrillic,cyrillic-ext');
 
 $font-base:   "Open Sans', sans-serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -16,7 +16,7 @@ $mq-breakpoints: (
 $mq-container-widths: (
   'xs': 100%,
   'sm': 100%,
-  'md': 1110px
+  'md': 1170px
 );
 
 $mq-container-indents: (

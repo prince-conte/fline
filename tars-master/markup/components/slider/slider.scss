@@ -1,0 +1,145 @@
+.slider {
+  
+  &__slide {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    outline: none;
+  }
+  
+  &__slide-box {
+    @include size(100%);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    
+    > .container {
+      position: relative;
+      height: 100%;
+    }
+  }
+  
+  &__slide-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: .4s;
+    opacity: 0;
+    
+    > article {
+      
+      @include mq(md) {     
+        width: 60%;
+        margin-top: -3rem;
+      }
+    }
+    
+      
+    @include mq(md) {
+      display: flex;
+    }
+    
+    
+    &--revers {
+      @include mq(md) {     
+        justify-content: flex-end
+      }
+      
+    > article {
+      
+      @include mq(md) {     
+        width: 50%;
+        margin-top: -3rem;
+      }
+    }
+      
+    }
+    
+  }
+  
+  &__slide-title {
+    @include font(2.4rem, 3rem);
+    margin-bottom: 1rem;
+    color: #fff;
+    
+    @include mq(md) {     
+      @include font(4rem, 4.5rem);
+      margin-bottom: 2rem;
+      font-weight: 300;
+      
+    }
+    
+  }
+    
+  &__slide-description {
+    @include font(1.3rem, 3rem);
+    margin-bottom: 3rem;
+    color: #fff;
+    
+    @include mq(md) {     
+      @include font(2rem, 3rem);
+      margin-bottom: 3rem;
+      font-weight: 300;
+    }
+    
+    
+  }
+  
+    .slick-active {
+      .slider__slide-content {
+        opacity: 1;
+      }
+    } 
+  
+  img {
+    vertical-align: top;
+    width: 100% !important;
+  }
+  
+  
+  .slick-dots {
+    
+    position: absolute;
+    display: flex;
+    bottom : 4rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    
+    li {
+      @include size(1rem);
+      position: relative;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      overflow: hidden;
+      
+      span {
+        @include size(100%);
+        position: absolute;
+        display: block;
+        left: 0;
+        top:0;
+        background: rgba(255,255,255, .5);
+      }
+      
+      
+      &:not(:last-child) {
+        margin-right: 1.3rem;
+      }
+    }
+    
+    .slick-active {
+      border: solid 2px $color-brand2;
+      
+      span {
+        background: transparent;
+      }
+    }
+    
+    @include mq(xs) {     
+      display: none;
+    }
+    
+  }
+}
+

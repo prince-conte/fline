@@ -1,0 +1,139 @@
+.news-block {
+  
+  @include mq(md) {
+    @include grid();
+  }
+  
+  &__top-notice-box {
+    
+    @include mq(md) {
+      @include grid-cols(1,3);
+      @include grid-col();
+    }    
+  }
+  
+  &__notice-link {
+    &:hover {
+      .news-block__notice-title {
+        color: $color-brand;
+      }
+    } 
+  }
+    
+  &__notice-box {
+    @include mq(md) {
+      @include grid-cols(2,3);
+      @include grid-col();
+    }  
+  }
+  
+  &__notice-box-grid {
+    
+    @include mq(md) {
+      @include grid();
+    }
+  }
+  
+  &__image-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 4px;
+    
+    > img {
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+  
+  &__top-notice-date {
+    @include font(1.1rem,1.1rem);
+    position: absolute;
+    bottom: 4rem;
+    left: 0;
+    color: #fff;
+    background: $color-brand2;
+    
+    @include mq(md) {
+      @include font(1.3rem,1.3rem);
+      padding: .7rem 1.2rem .6rem 1.2rem; 
+    }
+  }
+  
+  &__notice-title {
+    @include font(1.3rem,1.8rem);
+    margin: .5rem 0;
+    color: $color-base;
+    transition: $transition-duration-base;
+      
+    @include mq(md) {
+      @include font(1.6rem,2.4rem);
+    }
+  }
+   
+  &__notice {
+    @include grid-cols(1,2);
+    @include grid-col();
+    display: none;
+    
+    p {
+      padding-bottom: 1.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    
+    &:hover {
+      .news-block__notice-date {
+        color: $color-base-lighter;
+      }
+    }
+    
+    @include mq(md) {
+      display: block;
+      
+      p {
+        padding-bottom: 1.8rem;
+        margin-bottom: 2.2rem;
+      }
+    }
+    
+    &:nth-child(1),
+    &:nth-child(2) {
+      p {
+        border-bottom: 1px solid $color-f-border;
+      }
+
+    }    
+    &:nth-child(3),
+    &:nth-child(4) {
+      p {
+        padding-bottom: 0rem;
+        margin-bottom: 0rem;
+      }
+    }
+    
+    &:nth-child(2) {
+      @include mq(xs) {
+        border-color: transparent;
+      }
+    }  
+  }
+  
+  &__notice-date {
+    @include font(1.3rem, 1.3rem);
+    margin-bottom: .8rem;
+    color: $color-brand2;
+    transition: $transition-duration-base;
+  }
+  
+  &__notice-description {
+    color: $color-base;
+    
+    @include mq(md) {
+      @include font(1.3rem, 2.2rem);
+    }
+  }
+  
+  
+  
+}

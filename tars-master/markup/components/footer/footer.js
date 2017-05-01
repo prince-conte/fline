@@ -21,15 +21,13 @@ function siteFooterInit() {
   var $siteHeader = $('#header');
   
     if ($siteFooter.length) {
-        $('#main').css('min-height', $pageHeight - $siteHeader.height());
-      console.log($siteHeader.height())
-        $('#main').css('padding-bottom', $siteFooter.outerHeight());
+      $('#main').css('min-height', $pageHeight - $siteHeader.height());
+      $('#main').css('padding-bottom', $siteFooter.outerHeight());
 
-
-        $siteBody.css({
-            'opacity': 1,
-            'visibility': 'visible'
-        });
+      $siteBody.css({
+        'opacity': 1,
+        'visibility': 'visible'
+      });
     }
 }
 

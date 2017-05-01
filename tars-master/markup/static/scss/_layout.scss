@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
   @include container();
 }
+
 
 ::selection {
   color: #fff;
