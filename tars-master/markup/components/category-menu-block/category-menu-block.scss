@@ -48,7 +48,7 @@
   } 
   
   &__category-title {
-    @incude font(1.6rem, 2.2rem);
+    @include font(1.6rem, 2.2rem);
     font-weight: 600;
     color: #fff;
     
