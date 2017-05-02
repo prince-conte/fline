@@ -6,7 +6,7 @@
   &__line-top {
     display: flex;
     justify-content: space-between;
-    padding: 2.2rem 0;
+    padding: 2rem 0;
     
     @include mq(md) {
       padding: 3rem 0;
@@ -14,6 +14,9 @@
   }
   
   &__logo-box {
+    
+    margin: 0 auto;
+    
     @include mq(md) {
       display: flex;
     } 
@@ -29,25 +32,37 @@
     > img {
       vertical-align: top;
       width: auto;
-      height: auto
+      height: auto;
+      
+      @include mq(xs) {
+        display: block;
+        max-height: 2.8rem;
+        margin: 0 auto;
+      }
+      
     }
     
   }
   
   &__logo-description {
-    @include font(1.3rem, 1.8rem);
+    @include font(1.1rem, 1.4rem);
     text-align: center;
     color: $color-base-light;
     
     @include mq(md) {
+      @include font(1.3rem, 1.8rem);
       padding: .3rem 1.5rem 0;
       border-left: 1px solid #e7e7e7;
       text-align: left;
     }
-    
+      @include mq(xs) {
+      margin-top: 1.5rem;
+    }
+  
   }
   
   &__switch-box {
+    display: none;
     @include mq(md) {
       display: flex;
     }  
@@ -62,13 +77,17 @@
   }
   
   &__lang-switch {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid transparent;
-    border-bottom: 0;
+    display: none;
+    
+    @include mq(md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid transparent;
+      border-bottom: 0;
+    }
 
     &:hover {
       border-color: $color-base;

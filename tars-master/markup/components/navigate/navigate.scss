@@ -1,6 +1,10 @@
 .navigate {
   padding: 1rem 0;
   
+  @include mq(xs) {
+    display: none;
+  } 
+  
   &__menu {
     display: flex;
     justify-content: space-between;

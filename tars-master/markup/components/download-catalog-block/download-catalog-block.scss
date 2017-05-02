@@ -10,28 +10,27 @@
   &__button-link {
     @include hover(background, $color-brand);
     display: flex;
+    padding: .7rem .8rem .6rem .8rem;
+    border-radius: 4px;
     background: $color-brand2;
 
     @include mq(md) {
       width: 28.5rem;
-      border-radius: 4px;
-      
-      @include mq(md) {
-        padding: 1rem 2.5rem .6rem 1.6rem;
-      }
+    }
+    
+    @include mq(xs) {
+      width: 28.5rem;
+      margin-top: 2rem;
     }
     
     i {
       display: inline-block;
+      width: 2rem;
+      height: 3rem;
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: contain;
       background-image: url(../img/general/pdficon.svg);
-      
-      @include mq(md) {
-        width: 2rem;
-        height: 3rem;
-      }
     }
     
     
@@ -52,6 +51,7 @@
       
       span {
         @include font(1.1rem,1.6rem);
+        display: block;
         color: #fff;
         text-decoration: underline;
         

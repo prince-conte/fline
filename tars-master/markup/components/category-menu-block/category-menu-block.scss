@@ -74,7 +74,6 @@
     bottom: 1.5rem;
     padding-right: 1rem;
     border-right: 4px solid #fff;
-    opacity: 0;
     transition: .2s;
     
     @include mq(md) {
@@ -82,11 +81,12 @@
       bottom: 3.5rem;
       padding-right: 2rem;
       border-right: 4px solid #fff;
+      opacity: 0;
       
     }
     
     li {
-      @include font(1.1rem, 2rem);
+      @include font(1.1rem, 1.3rem);
 
 
       &:not(:last-child) {

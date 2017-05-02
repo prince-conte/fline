@@ -112,6 +112,8 @@ h5 {
 
 
 .typography {
+  
+  // Paragraph
   p {
     @include text-base();
     margin: 1.5rem 0;
@@ -134,11 +136,8 @@ h5 {
 }
 
 
-// Paragraph
-p {
-  margin: 0;
-  @include font(1.8rem, 2.6rem);
-}
+
+
 
 // Small
 small {

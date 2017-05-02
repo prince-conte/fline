@@ -14,3 +14,21 @@
 .nobr {
   white-space: nowrap;
 }
+
+.only-mobile {
+  display: none !important;
+  
+  @include mq(xs) {
+    display: block !important;
+  }
+}
+
+
+.except-mobile {
+  display: block !important;
+  
+  @include mq(xs) {
+    display: none !important;
+  }
+}
+

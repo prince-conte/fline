@@ -54,13 +54,18 @@
   @include hover(color, #fff);
   @include hover(background, $color-brand);
   padding: 1.2rem 3rem 1.1rem; 
-  display: inline-block;
   border-radius: 4px;
   color: #fff;
   background-color: $color-brand2;
   
   
+  @include mq(xs) {
+    display: block;
+    text-align: center;
+  }  
+  
   @include mq(md) {
+    display: inline-block;
     @include font(1.6rem, 1.6rem);
     padding: 1.7rem 3rem 1.6rem; 
   } 

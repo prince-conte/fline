@@ -43,6 +43,10 @@
     
   &__map {
     
+    @include mq(xs) {  
+      margin-top: 2rem;  
+    } 
+        
     @include mq(md) {  
       @include grid-cols(1,2);
       @include grid-col();   
