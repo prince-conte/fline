@@ -24,11 +24,25 @@
 }
 
 
-.except-mobile {
-  display: block !important;
+.only-desktop {
+  display: none !important;
   
-  @include mq(xs) {
-    display: none !important;
+  @include mq(md) {
+    display: block !important;
+  }
+  
+  &--big-desktop {
+    @media (max-width: 1400px) {
+      display: none !important;
+    }
+  }
+}
+
+.only-tab {
+  display: none !important;
+  
+  @media (max-width: 1400px) and (min-width: 768px) {
+    display: block !important;
   }
 }
 

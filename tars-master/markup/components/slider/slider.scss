@@ -62,12 +62,15 @@
     @include font(2.4rem, 3rem);
     margin-bottom: 1rem;
     color: #fff;
-    
+
+    @include mq(sm) {     
+      @include font(3rem, 3.5rem);
+    }
+      
     @include mq(md) {     
       @include font(4rem, 4.5rem);
       margin-bottom: 2rem;
-      font-weight: 300;
-      
+      font-weight: 300; 
     }
     
   }
@@ -77,8 +80,8 @@
     margin-bottom: 3rem;
     color: #fff;
     
-    @include mq(md) {     
-      @include font(2rem, 3rem);
+    @include mq(sm) {     
+      @include font(1.6rem, 2rem);
       margin-bottom: 3rem;
       font-weight: 300;
     }

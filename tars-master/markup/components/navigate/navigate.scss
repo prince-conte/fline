@@ -1,8 +1,9 @@
 .navigate {
+  display: none;
   padding: 1rem 0;
   
-  @include mq(xs) {
-    display: none;
+  @include mq(md) {
+    display: block;
   } 
   
   &__menu {

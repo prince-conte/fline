@@ -11,8 +11,11 @@
   
   
   &__navigate-menu {
-    display: flex;
-    justify-content: space-between;
+    display: none;
+    @include mq(md) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   
   &__navigate-menu-item {

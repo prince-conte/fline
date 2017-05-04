@@ -1,19 +1,21 @@
 .category-menu-block {
-  margin-bottom: -2rem;
+  @include grid();
+  margin-bottom: -3rem;
   
-  @include mq(md) {
-    @include grid();
-    margin-bottom: -3rem
-      
+  
+  @include mq(xs) {
+    display: block;
+    margin-bottom: -2rem; 
   }
   
   &__item {
-    margin-bottom: 2rem;
+    @include grid-cols(1,2);
+    @include grid-col();
+    margin-bottom: 3rem;
 
-    @include mq(md) {
-      @include grid-cols(1,2);
-      @include grid-col();
-      margin-bottom: 3rem;
+
+    @include mq(xs) {
+      margin-bottom: 2rem;
     }
     
     &:hover {

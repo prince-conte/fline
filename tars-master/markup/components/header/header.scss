@@ -11,14 +11,20 @@
     @include mq(md) {
       padding: 3rem 0;
     }
+        
+    @include mq(sm) {
+      align-items: center;
+    }
+    
   }
   
   &__logo-box {
+    display: flex;
+    justify-content: space-between;
     
-    margin: 0 auto;
     
     @include mq(md) {
-      display: flex;
+      justify-content: flex-start
     } 
   }
   
@@ -39,6 +45,12 @@
         max-height: 2.8rem;
         margin: 0 auto;
       }
+            
+      @include mq(sm) {
+        display: block;
+        max-height: 3.2rem;
+        margin: 0 auto;
+      }
       
     }
     
@@ -46,23 +58,21 @@
   
   &__logo-description {
     @include font(1.1rem, 1.4rem);
+    margin-top: 1.5rem;
     text-align: center;
     color: $color-base-light;
     
     @include mq(md) {
       @include font(1.3rem, 1.8rem);
+      margin-top: 0;
       padding: .3rem 1.5rem 0;
       border-left: 1px solid #e7e7e7;
       text-align: left;
-    }
-      @include mq(xs) {
-      margin-top: 1.5rem;
     }
   
   }
   
   &__switch-box {
-    display: none;
     @include mq(md) {
       display: flex;
     }  
@@ -72,21 +82,31 @@
   
   &__lang-box {
     position: relative;
-    margin-left: 3.2rem;
     z-index: 105;
-  }
-  
-  &__lang-switch {
-    display: none;
     
     @include mq(md) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid transparent;
-      border-bottom: 0;
+      margin-left: 3.2rem;
+    }
+
+  }
+  
+  &__lang-switch {  
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    border-bottom: 0;
+
+    
+    @include mq(xs) {
+      display: none;
+    }
+    
+    @include mq(md) {
+
+      
     }
 
     &:hover {
