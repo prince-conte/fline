@@ -94,7 +94,18 @@
     
     border-bottom: 1px solid $color-f-border;
 
+    @include mq(xs) {
+      padding: 1.6rem 0;
+    }  
+    
     @include mq(md) {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 4rem 0 3.9rem;
+    }  
+    
+    @include mq(sm) {
       display: flex;
       flex-wrap: nowrap;
       justify-content: space-between;
@@ -104,22 +115,46 @@
   }
   
   &__prodiction-menu-box {
-    width: 52%;
     
     @include mq(md) {
       @include grid();
+      width: 52%;
       flex-wrap: nowrap;
+    } 
+        
+    @include mq(sm) {
+      width: 50%;
     } 
     
     &--min {
-      width: 48%;
+      
+      @include mq(md) {
+        width: 48%;
+      }
+            
+      @include mq(sm) {
+        width: 50%;
+      }
+      
     }
     
-
-    
+    .is-active {
+      ul {
+        display: block;
+      }
+      h5 i {
+        color: $color-base-light;
+      }
+      
+    }
   }
     
   &__production-menu-item {
+    
+    @include mq(xs) {
+      margin-bottom: 1rem;
+    }
+    
     
     @include mq(md) {
       @include grid-cols(1,2);   
@@ -128,14 +163,44 @@
 
     
     > h5 {
+      br {
+        display: none;
+      }
+      
       @include mq(md) {
-        margin-bottom: 2rem;
+        margin-bottom: 2rem; 
+        br {
+          display: block;
+        }
       } 
+    }
+    
+    i {
+      position: relative;
+      display: none;
+      color: $color-brand2;
+    
+      @include mq(xs) {
+        @include font(2rem,2rem);
+        top: .3rem;
+        display: inline-block;
+      } 
+                 
+      @include mq(sm) {
+        @include font(2rem,2rem);
+        top: .3rem;
+        display: inline-block;
+      } 
+      
     }
     
       
     ul {
       display: none;
+      
+      @include mq(xs) {
+        margin: 1rem 0;
+      }   
       
       @include mq(md) {
         display: block;
@@ -151,9 +216,17 @@
       }
 
       &:not(:last-child) {
-        margin-bottom: 1.6rem;
+        margin-bottom: 1rem;
       }
+      
+      @include mq(md) {
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      } 
     }
+   
+
     
     
   }
@@ -174,9 +247,35 @@
       justify-content: space-between;
       padding: 3.9rem 0 4rem;
     }
+        
+    @include mq(sm) {
+      flex-direction:row;
+      justify-content: space-between;
+      padding: 3.9rem 0 4rem;
+    }
+    
+    
   }
   
   &__feedback-link {
+    @include font(1.8rem, 4rem);
+    display: inline-block;
+    margin-left: 3rem;
+    color: $color-brand;
+    white-space: nowrap;
+    
+    i {
+      @include font(2.4rem, 2.4rem);
+      position: relative;
+      top:.2rem;
+    }
+    
+    span {
+      text-decoration: underline;
+    }
+  }
+    
+  &__site-map-link {
     @include font(1.8rem, 4rem);
     display: inline-block;
     margin-left: 3rem;
@@ -198,6 +297,10 @@
     display: flex;
     align-items: center;
     
+    
+    @include mq(sm) {
+        display: none;
+    }
     
     @include mq(md) {
         margin: 0 5rem;

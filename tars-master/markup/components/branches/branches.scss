@@ -3,6 +3,10 @@
   
   &__grid {
     
+    @include mq(sm) {  
+      @include grid();
+    }
+        
     @include mq(md) {  
       @include grid();
     }
@@ -11,6 +15,11 @@
   
   &__content {
     
+    @include mq(sm) {  
+      @include grid-cols(1,2);
+      @include grid-col();
+    } 
+       
     @include mq(md) {  
       @include grid-cols(1,2);
       @include grid-col();
@@ -20,6 +29,8 @@
         padding-right: 6.5rem;
       }
     } 
+    
+    
   }
   
   &__content-title {
@@ -35,10 +46,13 @@
   &__content-reed-more {
     margin-top: 1.5rem;
     
+    @include mq(sm) { 
+      margin-top: 2rem;
+    }
+        
     @include mq(md) { 
       margin-top: 4rem;
-    }
-    
+    } 
   }
     
   &__map {
@@ -47,6 +61,11 @@
       margin-top: 2rem;  
     } 
         
+    @include mq(sm) {  
+      @include grid-cols(1,2);
+      @include grid-col();   
+    } 
+           
     @include mq(md) {  
       @include grid-cols(1,2);
       @include grid-col();   

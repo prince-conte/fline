@@ -8,6 +8,7 @@ html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 // Body
@@ -39,6 +40,18 @@ main {
     margin: 7rem 0;
   }  
   
+  &--min {
+  @include mq(md) {
+    margin: 5rem 0;
+  } 
+  }
+  
+}
+
+.section-buffer {
+  @include mq(md) {
+    margin: 4rem 0;
+  } 
 }
 
 // Links
@@ -118,6 +131,29 @@ h5 {
 
 .typography {
   
+  h2 {
+    @include h2();
+    margin-bottom: 2rem;
+    
+    i {
+      @include font(3.6rem,3.6rem);
+      position: relative;
+      top: .4rem;
+      color: $color-brand2;
+    }
+    
+    @include mq(md) {
+      margin-bottom: 3rem
+    }
+       
+    @include mq(sm) {
+      margin-bottom: 3rem;
+    }
+
+    
+  }
+  
+  
   // Paragraph
   p {
     @include text-base();
@@ -132,6 +168,10 @@ h5 {
   &__content-reed-more {
     margin-top: 1.5rem;
     
+    @include mq(sm) { 
+      margin-top: 6rem;
+    }
+        
     @include mq(md) { 
       margin-top: 4rem;
     }

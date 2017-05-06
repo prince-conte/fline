@@ -27,7 +27,7 @@ $(window)
     .load(function () {
         switchSize()
     })
-    .smartresize(function() {
+    .resize(function() {
         switchSize()
     });
 

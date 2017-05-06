@@ -1,17 +1,37 @@
 .category-menu-block {
-  @include grid();
-  margin-bottom: -3rem;
-  
-  
+
   @include mq(xs) {
     display: block;
     margin-bottom: -2rem; 
   }
   
+  @include mq(sm) {
+    @include grid();
+    margin-bottom: -3rem;
+  }
+  
+  @include mq(md) {
+    @include grid();
+    margin-bottom: -3rem;
+  }
+
+
+  
+  
+  
   &__item {
+    
+  @include mq(sm) {
     @include grid-cols(1,2);
     @include grid-col();
     margin-bottom: 3rem;
+  } 
+       
+  @include mq(md) {
+    @include grid-cols(1,2);
+    @include grid-col();
+    margin-bottom: 3rem;
+  } 
 
 
     @include mq(xs) {
@@ -115,6 +135,10 @@
         @include hover(color, #fff);
         color: #fff;
       }
+    }
+    
+    &--size {
+      text-transform: uppercase;
     }
   }
   

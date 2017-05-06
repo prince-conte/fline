@@ -3,11 +3,18 @@ mixin header()
     .container
     
       .header__line-top
+        .header__burger-box
+          a(href='#')
+            span
         a.header__logo-box(href='#')
           .header__logo-image
             img(src='static/img/general/logo.jpg' alt='ФомЛайн')
           .header__logo-description Крупнейший российский производитель<br>эластичного пенополиуретана
         .header__switch-box
+        
+          a.header__search-switch(href='#')
+            i.mdi.mdi-magnify
+        
           form.page-search-block
             input(type='search' placeholder='Поиск')
             button

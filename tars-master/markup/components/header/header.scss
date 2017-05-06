@@ -18,14 +18,76 @@
     
   }
   
-  &__logo-box {
-    display: flex;
-    justify-content: space-between;
+  &__burger-box {
+    display: inline-block;
     
+    @include mq(xs) {
+      display: flex;
+      padding: .6rem 0;
+    }
+        
+    @include mq(sm) {
+      display: flex;
+      align-self: center;
+      padding: 2rem;
+    }
     
     @include mq(md) {
-      justify-content: flex-start
+      display: none;
     } 
+    
+    a {
+      position: relative;
+      display: block;
+      width: 2.6rem;
+      height: 2rem;
+      
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: .3rem;
+        border-radius: 2px;
+        background: $color-brand2;
+        
+        &:before,
+        &:after {
+          position: absolute;
+          top: .8rem;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 2px;
+          background: $color-brand2;
+          content: '';
+        }
+                
+        &:after {
+          position: absolute;
+          top: 1.6rem;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 2px;
+          background: $color-brand2;
+        }
+        
+      }
+      
+      
+    }
+    
+  }
+  
+  &__logo-box {
+    display: block;
+        
+    @include mq(md) {
+      display: flex;
+      justify-content: space-between;
+    } 
+    
   }
   
   &__logo-image {
@@ -73,16 +135,52 @@
   }
   
   &__switch-box {
-    @include mq(md) {
-      display: flex;
-    }  
+    display: flex;
+    
+    @include mq(xs) {
+    }   
+    
+    @include mq(sm) {
+      align-self: center;
+    }
   }
   
+  &__search-switch {
+    position: relative;
+    display: inline-block;
 
+    @include mq(sm) {
+      margin-right: 1rem;
+    }
+        
+    @include mq(md) {
+      display: none;
+    }
+    
+
+    i {
+      @include font(3.2rem,3.2rem);
+      position: relative;
+      top: .2rem;
+      
+      color: $color-brand2;
+      
+      @include mq(sm) {
+        @include font(3.6rem,3.6rem);
+        top: .4rem;
+      }
+    }
+
+    
+  }
   
   &__lang-box {
     position: relative;
     z-index: 105;
+    
+    @include mq(xs) {
+      display: none;
+    }
     
     @include mq(md) {
       margin-left: 3.2rem;
