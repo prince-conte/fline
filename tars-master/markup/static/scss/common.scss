@@ -213,3 +213,13 @@ textarea {
   resize: none;
 }
 
+
+// tables
+
+.vertical-top {
+  vertical-align: top !important;
+}
+
+.vertical-text {
+	writing-mode: tb;
+}

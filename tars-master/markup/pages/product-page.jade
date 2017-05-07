@@ -13,6 +13,8 @@ html(class="no-js", lang="ru")
   include ../components/product-card/product-card
   include ../components/page-paginator/page-paginator
   include ../components/title-block/title-block
+  include ../components/product-info/product-info
+  include ../components/product-table/product-table
 
   head
     +head(head.defaults)
@@ -36,6 +38,8 @@ html(class="no-js", lang="ru")
           .section-box.section-box--min
             h1 Стандартный поролон ST
             +product-card()
+            +product-info()
+            +product-table()
 
     +footer()
 

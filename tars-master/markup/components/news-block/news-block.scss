@@ -79,12 +79,12 @@
     position: absolute;
     bottom: 4rem;
     left: 0;
+    padding: .7rem 1.2rem .6rem 1.2rem; 
     color: #fff;
     background: $color-brand2;
     
     @include mq(md) {
       @include font(1.3rem,1.3rem);
-      padding: .7rem 1.2rem .6rem 1.2rem; 
     }
   }
   
