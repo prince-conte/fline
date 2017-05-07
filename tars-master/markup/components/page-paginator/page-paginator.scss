@@ -15,15 +15,6 @@
   
   &__item {
     display: inline-block;
-
-    @include mq(sm) {
-      margin: 3rem 0;
-    }
-
-    @include mq(md) {
-      margin: 2rem 0;
-    }
-  
   }
   
   .is-active {
@@ -35,5 +26,4 @@
     margin: 0 1rem;
     color: $color-base-light;
   }
-  
 }

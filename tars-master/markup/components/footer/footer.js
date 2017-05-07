@@ -10,7 +10,8 @@ $(function(){
     if (thisMenu.hasClass('is-active')) {
       thisMenu.removeClass('is-active')
     } else {
-      thisMenu.addClass('is-active')
+      thisMenu.addClass('is-active');
+      siteFooterInit()
     }
     
     

@@ -41,9 +41,12 @@ main {
   }  
   
   &--min {
-  @include mq(md) {
-    margin: 5rem 0;
-  } 
+     margin: 2rem 0;
+    
+    @include mq(md) {
+      margin: 5rem 0;
+    } 
+    
   }
   
 }
@@ -52,6 +55,29 @@ main {
   @include mq(md) {
     margin: 4rem 0;
   } 
+}
+
+// Title
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+
+
+h1 {
+  @include h1()
+}
+
+h2 {
+  @include h2()
 }
 
 // Links
@@ -108,19 +134,6 @@ ol, ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-// Title
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-  display: block;
 }
 
 

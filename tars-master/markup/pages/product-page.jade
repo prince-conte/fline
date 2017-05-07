@@ -1,0 +1,46 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../components/head/head
+  include ../components/example/example
+  include ../components/header/header
+  include ../components/footer/footer
+  include ../components/navigate/navigate
+  include ../components/card-slider/card-slider
+  include ../components/slider/slider-three
+  include ../components/category-menu-block/category-menu-block
+  include ../components/download-catalog-block/download-catalog-block
+  include ../components/product-card/product-card
+  include ../components/page-paginator/page-paginator
+  include ../components/title-block/title-block
+
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+    +header()
+    main.page__wrapper#main
+      .page-paginator
+        .container
+          ul.page-paginator__grid
+            li.page-paginator__item
+              a(href='#') Главная страница  
+              span <i class='mdi mdi-chevron-right'></i>
+              a(href='#') Продукция
+              span <i class='mdi mdi-chevron-right'></i>
+              a.is-active(href='#') Стандартный поролон ST
+
+      
+      section
+        .container
+          .section-box.section-box--min
+            h1 Стандартный поролон ST
+            +product-card()
+
+    +footer()
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

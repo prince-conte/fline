@@ -32,7 +32,7 @@
 }
 
 @mixin h1 {
-  @include font(3rem, 4.6rem);
+  @include font(2.4rem, 3.2rem);
   font-weight: 300;
 
   @include mq(sm) { 
