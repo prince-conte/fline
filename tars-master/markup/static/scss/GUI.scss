@@ -68,15 +68,30 @@
 
 
 @mixin h2 {
-  @include font(3rem, 3.2rem);
+  @include font(1.8rem, 2.4rem);
   font-weight: 300;
 
   @include mq(sm) { 
-    @include font(3rem, 2.4rem);
+    @include font(2.4rem, 3.2rem);
   }
   
   @include mq(md) { 
     @include font(3rem, 3.6rem);
+  }
+  
+  i {
+    color: $color-brand2;
+    
+    @include font(1.8rem, 2.4rem);
+    font-weight: 300;
+
+    @include mq(sm) { 
+      @include font(2.4rem, 3.2rem);
+    }
+
+    @include mq(md) { 
+      @include font(3rem, 3.6rem);
+    }
   }
 }
 

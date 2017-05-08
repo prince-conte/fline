@@ -152,23 +152,6 @@ h5 {
   h2 {
     @include h2();
     margin-bottom: 2rem;
-    
-    i {
-      @include font(3.6rem,3.6rem);
-      position: relative;
-      top: .4rem;
-      color: $color-brand2;
-    }
-    
-    @include mq(md) {
-      margin-bottom: 3rem
-    }
-       
-    @include mq(sm) {
-      margin-bottom: 3rem;
-    }
-
-    
   }
   
   

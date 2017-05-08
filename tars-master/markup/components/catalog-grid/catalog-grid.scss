@@ -54,6 +54,18 @@
       vertical-align: top;
     }
   }
+  
+  &__item-content {
+    padding: 0;
+    
+    @include mq(sm) {
+      padding: 0 2rem;
+    }
+        
+    @include mq(md) {
+      padding: 0 2.5rem;
+    }
+  }
     
   &__item-title {
     @include font(1.8rem,2.2rem);
@@ -87,6 +99,11 @@
     span {
       display: block;
     }
+  }
+  
+  
+  &__list-box {
+    margin-top: 2rem;
   }
   
   
