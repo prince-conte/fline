@@ -15,6 +15,7 @@ html(class="no-js", lang="ru")
   include ../components/title-block/title-block
   include ../components/product-info/product-info
   include ../components/product-table/product-table
+  include ../components/adventage-block/adventage-block
 
   head
     +head(head.defaults)
@@ -40,6 +41,52 @@ html(class="no-js", lang="ru")
             +product-card()
             +product-info()
             +product-table()
+            
+            .section-box
+              h2.section-box__big-title Сертификаты и документы
+              .download-catalog-block
+              
+                a.download-catalog-block__button-link(href='#' download)
+                  i
+                  p <span> Брошюра о продукте ST 1930</span> (PDF, 70 Kb)
+              
+                a.download-catalog-block__button-link.download-catalog-block__button-link--big(href='#' download)
+                  i
+                  p <span> Документация/руководства/испытания</span> (PDF, 70 Kb)
+
+      section.section-box
+        .container
+          h2.section-box__big-title Статьи по теме <i class='mdi mdi-chevron-right'></i>            
+          .news-block.news-block--thematic
+
+            .news-block__top-notice-box
+
+              a.news-block__notice-link(href='#')
+                .news-block__image-box
+                  img(src='static/img/general/news-1.jpg' alt='ФомЛайн')
+                  time.news-block__top-notice-date(datetime="2016-11-12") 12 ноября 2016
+                h3.news-block__notice-title Компания «ФомЛайн» на 28-й международной выставке «Мебель-2016»
+
+
+            .news-block__top-notice-box
+
+              a.news-block__notice-link(href='#')
+                .news-block__image-box
+                  img(src='static/img/general/news-1.jpg' alt='ФомЛайн')
+                  time.news-block__top-notice-date(datetime="2016-11-12") 12 ноября 2016
+                h3.news-block__notice-title Компания «ФомЛайн» на 28-й международной выставке «Мебель-2016»
+
+
+            .news-block__top-notice-box
+
+              a.news-block__notice-link(href='#')
+                .news-block__image-box
+                  img(src='static/img/general/news-1.jpg' alt='ФомЛайн')
+                  time.news-block__top-notice-date(datetime="2016-11-12") 12 ноября 2016
+                h3.news-block__notice-title Компания «ФомЛайн» на 28-й международной выставке «Мебель-2016»
+
+      +adventage-block()
+      +slider-three()
 
     +footer()
 

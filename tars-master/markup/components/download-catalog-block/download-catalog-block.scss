@@ -28,6 +28,12 @@
       width: 28.5rem;
     }
     
+    &--big {
+    @include mq(md) {
+      width: 30rem;
+    } 
+    }
+    
     i {
       display: inline-block;
       width: 2rem;

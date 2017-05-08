@@ -6,7 +6,17 @@ $(function(){
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    dots: false
+    dots: false,
+    customPaging: function(slider, i) {
+        return $('<span></span>');
+    },
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: true
+        }
+      }]
   });
   
   

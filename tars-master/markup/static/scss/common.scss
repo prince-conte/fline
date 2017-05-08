@@ -49,7 +49,12 @@ main {
     
   }
   
+  &__big-title {
+    @include h1();
+  }
 }
+
+
 
 .section-buffer {
   @include mq(md) {

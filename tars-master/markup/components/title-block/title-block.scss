@@ -39,6 +39,11 @@
     @include mq(md) {
       width: 50%;
     }
+    
+    &--full {
+      width: 100%;
+    }
+    
   }
   
     &__button-link {

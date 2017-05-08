@@ -1,0 +1,50 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../components/head/head
+  include ../components/example/example
+  include ../components/header/header
+  include ../components/footer/footer
+  include ../components/navigate/navigate
+  include ../components/slider/slider
+  include ../components/slider/slider-three
+  include ../components/category-menu-block/category-menu-block
+  include ../components/download-catalog-block/download-catalog-block
+  include ../components/branches/branches
+  include ../components/page-paginator/page-paginator
+  include ../components/title-block/title-block
+  include ../components/catalog-grid/catalog-grid
+
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+    +header()
+    main.page__wrapper#main
+      +page-paginator()
+      
+      
+      section
+        .container
+          .title-block
+            .title-block__grid 
+              h1.title-block__title.title-block__title--full Наполнение для матрасов и подушек
+
+          section.section-box.section-box--min.typography
+            h2 Однослойные матрасные заготовки <i class='mdi mdi-chevron-right'></i>
+            p Все матрасы из коллекции многозональных матрасов имеют специальную фигурную поверхность, которая обеспечивает надежную поддержку отдельных частей тела спящего человека. Также фигурная резка поверхности матраса обеспечивает дополнительную вентиляцию.
+            
+            p Все модели монолитных матрасов могут быть изготовлены в следующих высотах:  140, 160, 180, 200 мм. В зависимости от марки пены матрасы могут быть произведены в трех вариантах жесткости: высокая, средняя, низкая.
+          
+          +catalog-grid()
+
+
+        +slider-three()
+
+    +footer()
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

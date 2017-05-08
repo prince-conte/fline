@@ -208,6 +208,49 @@
     }
   }
   
+  &--thematic {
+    
+    @include mq(xs) {
+      margin: 2rem 0;
+      
+      .news-block__top-notice-box {
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+        
+    @include mq(sm) {
+      margin: 3rem 0;
+      
+      .news-block__top-notice-box {
+        
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+        
+        &:last-child {
+          display: none;
+        } 
+      }
+    }
+        
+    @include mq(md) {
+      margin: 3rem 0;
+      
+      .news-block__top-notice-box {
+        
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+        
+        &:last-child {
+          display: block;
+        } 
+      }
+    }
+    
+  }
   
   
 }

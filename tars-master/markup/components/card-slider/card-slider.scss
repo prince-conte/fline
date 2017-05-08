@@ -9,6 +9,47 @@
       outline: none;
     }
   }
+  
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    bottom : 0rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    
+    @include mq(xs) {
+      bottom : -4rem;
+    }
+    
+    li {
+      @include size(1rem);
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      
+      span {
+        @include size(100%);
+        position: absolute;
+        display: block;
+        left: 0;
+        top:0;
+        background: #e0e1e1
+      }
+      
+      
+      &:not(:last-child) {
+        margin-right: 1.3rem;
+      }
+    }
+    
+    .slick-active {
+      
+      span {
+        background: $color-brand2;
+      }
+    }
+  }
+  
 }
 
 // nav
