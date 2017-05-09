@@ -21,6 +21,14 @@
     display: block;
     text-align: center;
       
+    @include mq(xs) {
+      display: none;
+      
+      &:first-child {
+        display: block;
+      }
+    }    
+          
     @include mq(sm) {
       display: none;
       
@@ -100,21 +108,11 @@
     img {
       vertical-align: top;
       max-width: 100%;
+ 
+      @include mq(xs) {
+       max-height: 2rem; 
+      } 
     }
-    
-    &--burger {
-      @include mq(md) {
-      display: none;
-      }
-    }
-        
-    &--search {
-      @include mq(md) {
-      display: none;
-      }
-    }
-    
-    
   }
   
   
@@ -436,6 +434,109 @@
     white-space: nowrap;
 
   }
+  
+  &__search-switch {
+    position: relative;
+    display: inline-block;
+        
+    @include mq(md) {
+      display: none;
+    }
+    
+
+    i {
+      @include font(3.2rem,3.2rem);
+      position: relative;
+      top: .2rem;
+      
+      color: $color-brand2;
+      
+      @include mq(sm) {
+        @include font(3.6rem,3.6rem);
+        top: .4rem;
+      }
+    }  
+  }
+  
+  
+  &__burger-box {
+    display: inline-block;
+    
+    @include mq(xs) {
+      display: flex;
+      padding: .6rem 0;
+    }
+        
+    @include mq(sm) {
+      display: flex;
+      align-self: center;
+      padding: 2rem;
+    }
+    
+    @include mq(md) {
+      display: none;
+    } 
+    
+    a {
+      position: relative;
+      display: block;
+      width: 2.6rem;
+      height: 2rem;
+      
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: .3rem;
+        border-radius: 2px;
+        background: $color-brand2;
+        
+        &:before,
+        &:after {
+          position: absolute;
+          top: .8rem;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 2px;
+          background: $color-brand2;
+          content: '';
+        }
+                
+        &:after {
+          position: absolute;
+          top: 1.6rem;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 2px;
+          background: $color-brand2;
+        }    
+      }
+    } 
+  }
+  
+  &__navigate-menu-box {
+    
+    @include mq(xs) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    } 
+        
+    @include mq(sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    } 
+        
+    @include mq(md) {
+      display: block;
+    } 
+    
+  }
+  
 }
 
 

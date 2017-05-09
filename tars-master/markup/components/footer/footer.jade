@@ -2,42 +2,42 @@ mixin footer(data)
   footer.footer#footer
     nav.footer__navigate
       .container
-        ul.footer__navigate-menu
-
-          li.footer__navigate-menu-item.footer__navigate-menu-item--burger.not-desktop
+      
+        .footer__navigate-menu-box
+        
+          .footer__burger-box
             a(href='#')
-              img(src='static/img/general/logo-footer.png' alt='ФомЛайн')
+              span
+        
+          ul.footer__navigate-menu
 
+            li.footer__navigate-menu-item
+              a(href='#')
+                img(src='static/img/general/logo-footer.png' alt='ФомЛайн')
 
-          li.footer__navigate-menu-item
-            a(href='#')
-              img(src='static/img/general/logo-footer.png' alt='ФомЛайн')
+            li.footer__navigate-menu-item
+              a(href='#') Продукция  
 
+            li.footer__navigate-menu-item
+              a(href='#') О компании
 
-          li.footer__navigate-menu-item
-            a(href='#') Продукция  
+            li.footer__navigate-menu-item
+              a(href='#') Документация
 
-          li.footer__navigate-menu-item
-            a(href='#') О компании
+            li.footer__navigate-menu-item
+              a(href='#') Где купить
 
-          li.footer__navigate-menu-item
-            a(href='#') Документация
+            li.footer__navigate-menu-item
+              a(href='#') Новости
 
-          li.footer__navigate-menu-item
-            a(href='#') Где купить
+            li.footer__navigate-menu-item
+              a(href='#') Парнерам
 
-          li.footer__navigate-menu-item
-            a(href='#') Новости
-
-          li.footer__navigate-menu-item
-            a(href='#') Парнерам
-
-          li.footer__navigate-menu-item
-            a(href='#') Контакты
-            
-            
-          li.footer__navigate-menu-item.footer__navigate-menu-item--search.not-desktop
-            a(href='#') Контакты
+            li.footer__navigate-menu-item
+              a(href='#') Контакты
+              
+          a.footer__search-switch(href='#')
+            i.mdi.mdi-magnify  
             
     .footer__production-menu-block
       .container
