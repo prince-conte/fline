@@ -4,9 +4,15 @@ mixin footer(data)
       .container
         ul.footer__navigate-menu
 
+          li.footer__navigate-menu-item.footer__navigate-menu-item--burger.not-desktop
+            a(href='#')
+              img(src='static/img/general/logo-footer.png' alt='ФомЛайн')
+
+
           li.footer__navigate-menu-item
             a(href='#')
               img(src='static/img/general/logo-footer.png' alt='ФомЛайн')
+
 
           li.footer__navigate-menu-item
             a(href='#') Продукция  
@@ -27,6 +33,10 @@ mixin footer(data)
             a(href='#') Парнерам
 
           li.footer__navigate-menu-item
+            a(href='#') Контакты
+            
+            
+          li.footer__navigate-menu-item.footer__navigate-menu-item--search.not-desktop
             a(href='#') Контакты
             
     .footer__production-menu-block

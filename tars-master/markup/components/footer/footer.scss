@@ -11,7 +11,6 @@
   
   
   &__navigate-menu {
-    display: none;
     @include mq(md) {
       display: flex;
       justify-content: space-between;
@@ -19,7 +18,22 @@
   }
   
   &__navigate-menu-item {
+    display: block;
     text-align: center;
+      
+    @include mq(sm) {
+      display: none;
+      
+      &:first-child {
+        display: block;
+      }
+    }    
+    
+    @include mq(md) {
+      display: block;
+    }
+    
+    
     
       &:not(:first-child) {
         a {
@@ -87,6 +101,20 @@
       vertical-align: top;
       max-width: 100%;
     }
+    
+    &--burger {
+      @include mq(md) {
+      display: none;
+      }
+    }
+        
+    &--search {
+      @include mq(md) {
+      display: none;
+      }
+    }
+    
+    
   }
   
   
