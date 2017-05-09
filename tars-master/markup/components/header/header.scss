@@ -71,13 +71,9 @@
           height: 100%;
           border-radius: 2px;
           background: $color-brand2;
-        }
-        
+        }    
       }
-      
-      
-    }
-    
+    } 
   }
   
   &__logo-box {
@@ -169,9 +165,7 @@
         @include font(3.6rem,3.6rem);
         top: .4rem;
       }
-    }
-
-    
+    }  
   }
   
   &__lang-box {
