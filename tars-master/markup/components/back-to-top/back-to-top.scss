@@ -38,6 +38,14 @@
 		bottom: 5.6rem;
 		right: 16rem;
 		
+    &:hover {
+      background: #8fba41;
+    }
+        
+    &:active {
+      background: #89b33c;
+    }
+    
 		i {
 			@include font(3.2rem,3.2rem);
 		}

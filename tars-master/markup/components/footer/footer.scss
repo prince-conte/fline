@@ -246,11 +246,13 @@
     }
     
     li {
-      
       a {
         @include font(1.3rem,1.6rem);
-        @include hover(color, $color-brand);
         color: $color-base;
+        
+        &:hover {
+          color: $color-brand;
+        }
       }
 
       &:not(:last-child) {

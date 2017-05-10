@@ -54,6 +54,8 @@
     border-radius: 4px;
     background: $color-brand2;
 
+      
+      
     @include mq(xs) {
       margin-top: 2rem;
     }
@@ -64,6 +66,14 @@
     
     @include mq(md) {
       width: 28.5rem;
+      
+      &:hover {
+        background: #8fba41;
+      }
+
+      &:active {
+        background: #89b33c;
+      }
     }
     
     i {

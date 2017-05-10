@@ -8,7 +8,6 @@
   
   
   &__button-link {
-    @include hover(background, $color-brand);
     display: flex;
     align-items: center;
     padding: .7rem .8rem .6rem .8rem;
@@ -26,6 +25,13 @@
     
     @include mq(md) {
       width: 28.5rem;
+      &:hover {
+        background: #8fba41;
+      }
+
+      &:active {
+        background: #89b33c;
+      }
     }
     
     &--big {
