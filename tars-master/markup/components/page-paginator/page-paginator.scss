@@ -1,15 +1,15 @@
 .page-paginator {
   
   @include font(1.3rem,2.2rem);
-  margin: 4rem 0;
+  margin: 1.5rem 0;
   color: $color-brand;
 
   @include mq(sm) {
-    margin: 3rem 0;
+    margin: 2rem 0;
   }
       
   @include mq(md) {
-    margin: 2rem 0;
+    margin: 3rem 0;
   }
   
   

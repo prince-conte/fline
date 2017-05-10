@@ -96,9 +96,20 @@
       @include font(1.3rem,2rem);
     }
     
-    span {
+    span, 
+		a {
       display: block;
+			color: $color-base;
     }
+		
+		p {
+		
+    @include mq(sm) {
+      @include font(1.3rem,2rem);
+    }
+			
+		}
+		
   }
   
   

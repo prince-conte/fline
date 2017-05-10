@@ -43,12 +43,6 @@
       }
     }
     
-      
-    @include mq(md) {
-      display: flex;
-    }
-    
-    
     &--revers {
       @include mq(md) {     
         justify-content: flex-end
@@ -245,7 +239,7 @@
     text-align: center;
     
     @include mq(xs) {     
-      margin: 1.5rem 0;
+      margin: 1rem 0;
     }
         
     @include mq(sm) {     
@@ -304,6 +298,23 @@
       }
     }
   } 
+  
+  &--footer {
+    
+    @include mq(xs) {
+      margin-top: 4rem
+    }
+        
+    @include mq(ms) {
+      margin-top: 4rem
+    }
+            
+    @include mq(md) {
+      margin-top: 6rem
+    }
+    
+    
+  }
   
 }
 

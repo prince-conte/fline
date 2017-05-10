@@ -1,0 +1,50 @@
+.back-to-top {
+	@include hover(background, $color-brand);
+	position: fixed;
+	bottom: 3rem;
+	right: 2.2rem;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background: $color-brand2;
+	border-radius: .2rem;
+	
+	i {
+		color: #fff;
+	}
+	
+		
+	@include mq(xs) {
+		@include size(4rem);
+		
+		i {
+			@include font(1.8rem,1.8rem);
+		}
+	}
+			
+	@include mq(sm) {
+		@include size(4rem);
+		bottom: 10rem;
+		right: 3.4rem;
+
+		i {
+			@include font(2.6rem,2.6rem);
+		}
+	}
+	
+	
+	@include mq(md) {
+		@include size(5rem);
+		bottom: 5.6rem;
+		right: 16rem;
+		
+		i {
+			@include font(3.2rem,3.2rem);
+		}
+	}
+
+	&--is-active {
+		display: flex;
+	}
+	
+}

@@ -16,10 +16,11 @@ html(class="no-js", lang="ru")
   include ../components/product-info/product-info
   include ../components/product-table/product-table
   include ../components/adventage-block/adventage-block
+  include ../components/back-to-top/back-to-top
 
   head
     +head(head.defaults)
-  body.page
+  body.page#top
     |%=symbols=%
     +header()
     main.page__wrapper#main
@@ -89,6 +90,7 @@ html(class="no-js", lang="ru")
       +slider-three()
 
     +footer()
+    +back-to-top()
 
     script(src='%=static=%js/separate-js/svg4everybody.min.js')
     script svg4everybody();

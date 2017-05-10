@@ -1,7 +1,4 @@
 $(function(){
-
-  var $footer = 
-  
   
   $('.js-production-menu').on('click', function () {
     

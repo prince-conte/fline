@@ -194,11 +194,11 @@
       }
       
       @include mq(xs) {
-        margin-bottom: 2rem; 
+        margin-bottom: 1rem; 
         white-space: nowrap;
       }       
       @include mq(md) {
-        margin-bottom: 2rem; 
+        margin-bottom: 1rem; 
         br {
           display: block;
         }
@@ -277,37 +277,52 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    padding: 1.9rem 0 4rem;
+    padding: 2rem 0 2rem;
     border-bottom: 1px solid $color-f-border;
+ 
+    @include mq(sm) {
+      flex-direction:row;
+      justify-content: space-between;
+      padding: 1.5rem 0 1.5rem;
+    }
+    
     
     @include mq(md) {
       flex-direction:row;
       justify-content: space-between;
       padding: 3.9rem 0 4rem;
     }
-        
-    @include mq(sm) {
-      flex-direction:row;
-      justify-content: space-between;
-      padding: 3.9rem 0 4rem;
-    }
-    
-    
+       
   }
   
   &__feedback-link {
-    @include font(1.8rem, 4rem);
+    @include font(1.3rem, 2rem);
     display: inline-block;
     color: $color-brand;
     white-space: nowrap;
     
+    @include mq(sm) {
+      @include font(1.3rem, 4.2rem);
+      margin-left: 3rem;
+    
+			i {
+				@include font(1.8rem, 1.8rem);
+				top:.2rem;
+			}
+    }
+        
     @include mq(md) {
       @include font(1.8rem, 4.2rem);
       margin-left: 3rem;
+    
+			i {
+				@include font(2.4rem, 2.4rem);
+				top:.2rem;
+			}
     }
     
     i {
-      @include font(2.4rem, 2.4rem);
+      @include font(1.8rem, 1.8rem);
       position: relative;
       top:.2rem;
     }
@@ -318,7 +333,7 @@
   }
     
   &__site-map-link {
-    @include font(1.3rem, 4.2rem);
+    @include font(1.3rem, 3rem);
     display: inline-block;
     margin: 0 3rem;
     color: $color-brand;
@@ -326,6 +341,14 @@
 
     @include mq(xs) {
       margin: 0;
+    }
+		
+    @include mq(sm) {
+			@include font(1.3rem,4rem);
+    }
+    		
+    @include mq(md) {
+			@include font(1.3rem,4rem);
     }
     
     i {
@@ -402,7 +425,7 @@
   
   
   &__realweb {
-    @include font(1.3rem,4rem);
+    @include font(1.3rem,3rem);
     @include hover(color,$color-base);
     font-family: Segoe,Segoe UI,Optima,Arial,sans-serif;
     color: $color-base;
@@ -424,14 +447,28 @@
       }
     }
     
+    @include mq(sm) {
+			@include font(1.3rem,4rem);
+    }
+		    
     @include mq(md) {
+			@include font(1.3rem,4rem);
       margin-right: 5.5rem;
     }
+		
   }
   
   &__copyright {
-    @include font(1.3rem,4rem);
+    @include font(1.3rem,3rem);
     white-space: nowrap;
+		
+    @include mq(sm) {
+			@include font(1.3rem,4rem);
+    }
+		
+    @include mq(md) {
+			@include font(1.3rem,4rem);
+    }
 
   }
   

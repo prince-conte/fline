@@ -13,10 +13,11 @@ html(class="no-js", lang="ru")
   include ../components/branches/branches
   include ../components/page-paginator/page-paginator
   include ../components/title-block/title-block
+  include ../components/back-to-top/back-to-top
 
   head
     +head(head.defaults)
-  body.page
+  body.page#top
     |%=symbols=%
     +header()
     main.page__wrapper#main
@@ -40,9 +41,10 @@ html(class="no-js", lang="ru")
           .section-box.section-box--min
 
             .category-menu-block
+
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category1.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/1.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title Стандартный поролон <i class='mdi mdi-chevron-right'></i>
 
@@ -62,13 +64,12 @@ html(class="no-js", lang="ru")
 
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category3.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/2.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title Высокоэластичные пены (HR) <i class='mdi mdi-chevron-right'></i>
 
                     ul.category-menu-block__subcategories-menu
 
-                      li
                     ul.category-menu-block__subcategories-menu.category-menu-block__subcategories-menu--size
 
                       li
@@ -83,15 +84,13 @@ html(class="no-js", lang="ru")
                       li
                         a(href='#') <i class='mdi mdi-chevron-right'></i> hs
 
+
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category2.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/3.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title С памятью формы (LR) <i class='mdi mdi-chevron-right'></i>
 
-                    ul.category-menu-block__subcategories-menu
-
-                      li
                     ul.category-menu-block__subcategories-menu.category-menu-block__subcategories-menu--size
 
                       li
@@ -108,7 +107,7 @@ html(class="no-js", lang="ru")
 
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category4.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/4.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title Латексноподобные (LL) <i class='mdi mdi-chevron-right'></i>
 
@@ -136,7 +135,7 @@ html(class="no-js", lang="ru")
             .category-menu-block
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category1.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/5.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title Стандартный поролон <i class='mdi mdi-chevron-right'></i>
 
@@ -156,7 +155,7 @@ html(class="no-js", lang="ru")
 
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category3.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/6.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title Высокоэластичные пены (HR) <i class='mdi mdi-chevron-right'></i>
 
@@ -179,7 +178,7 @@ html(class="no-js", lang="ru")
 
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category2.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/7.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title С памятью формы (LR) <i class='mdi mdi-chevron-right'></i>
 
@@ -202,7 +201,7 @@ html(class="no-js", lang="ru")
 
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category4.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/8.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title Латексноподобные (LL) <i class='mdi mdi-chevron-right'></i>
 
@@ -231,7 +230,7 @@ html(class="no-js", lang="ru")
             .category-menu-block
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category1.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/9.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title Стандартный поролон <i class='mdi mdi-chevron-right'></i>
 
@@ -251,7 +250,7 @@ html(class="no-js", lang="ru")
 
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category3.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/10.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title Высокоэластичные пены (HR) <i class='mdi mdi-chevron-right'></i>
 
@@ -274,7 +273,7 @@ html(class="no-js", lang="ru")
 
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category2.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/11.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title С памятью формы (LR) <i class='mdi mdi-chevron-right'></i>
 
@@ -297,7 +296,7 @@ html(class="no-js", lang="ru")
 
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category4.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/12.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title Латексноподобные (LL) <i class='mdi mdi-chevron-right'></i>
 
@@ -320,7 +319,7 @@ html(class="no-js", lang="ru")
 
               .category-menu-block__item
                 .category-menu-block__item-box
-                  img(src='static/img/general/category4.jpg' alt='ФомЛайн')
+                  img(src='static/img/general/pr-index/1.jpg' alt='ФомЛайн')
                   .category-menu-block__item-content
                     h3.category-menu-block__category-title Латексноподобные (LL) <i class='mdi mdi-chevron-right'></i>
 
@@ -345,6 +344,7 @@ html(class="no-js", lang="ru")
         +slider-three()
 
     +footer()
+    +back-to-top()
 
     script(src='%=static=%js/separate-js/svg4everybody.min.js')
     script svg4everybody();
