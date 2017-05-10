@@ -13,6 +13,7 @@
   
   
   &__item { 
+    display: block;
     margin-bottom: 2rem;
   
     @include mq(sm) {
@@ -33,8 +34,7 @@
   
   &__item-box {
     padding: 2rem 0;
-    border-top: 1px solid #eeefef;
-    border-bottom: 1px solid #eeefef;
+    border: 1px solid #eeefef;
 
     @include mq(md) {
       padding: 3rem 0;
@@ -44,19 +44,30 @@
   
   &__item-image {
     margin-bottom: 2rem;
-    
+		overflow: hidden;
+      
     @include mq(md) {
       margin-bottom: 3rem;
     }
     
     img {
-      width: 100%;
+      width: 100% !important;
       vertical-align: top;
     }
+    
+    
+    
   }
   
+  &__item-image-slide {
+    @include mq(xs) {
+      &:not(:first-child) {
+        display: none !important;
+      }
+    }
+  }
   &__item-content {
-    padding: 0;
+    padding: 0 1.8rem;
     
     @include mq(sm) {
       padding: 0 2rem;
@@ -101,13 +112,65 @@
       display: block;
 			color: $color-base;
     }
+    
+    dt {
+      @include font(1.3rem,3rem);
+      font-weight: 700;
+      
+				@include mq(sm) {
+					@include font(1.3rem,1.8rem);
+				}
+										
+				@include mq(sm) {
+					@include font(1.3,2.2rem);
+				}
+				
+    }
+    
 		
 		p {
+      margin: 2rem 0;
 		
-    @include mq(sm) {
-      @include font(1.3rem,2rem);
-    }
+      @include mq(sm) {
+        @include font(1.3rem,1.8rem);
+        margin: 1.5rem 0;
+      }
+					
+      @include mq(md) {
+        @include font(1.3rem,2rem);
+      }
 			
+		}
+		
+		dl {
+			
+			dd {
+				@include font(1.3,2.2rem);
+				position: relative;
+				display: inline-block;
+				padding-left: 1rem;
+					
+				@include mq(sm) {
+					@include font(1.3rem,1.8rem);
+				}
+										
+				@include mq(sm) {
+					@include font(1.3,2.2rem);
+				}
+				
+				&:before {
+					@include size(.3rem);
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translate(0,-50%);
+					border-radius: 50%;
+					background: $color-brand2;
+					content: '';
+					
+				}
+					
+			}
 		}
 		
   }
