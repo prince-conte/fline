@@ -48,24 +48,30 @@
       @include grid-col();
       display: flex;
       flex-direction: column;
+      margin-top: 0;
     }
   }
   
   &__description-content {
     
-    @include mq(xs) {
-      @include font(1.3rem,1.8rem);
-    }
+    p {
       
-    @include mq(sm) {
-      @include font(1.3rem,1.8rem);
-      width: 50%;
-      padding-right: 4rem;
+      @include mq(xs) {
+        @include font(1.3rem,1.8rem);
+      }
+
+      @include mq(sm) {
+        @include font(1.3rem,1.8rem);
+        width: 50%;
+        padding-right: 4rem;
+      }
+
+      @include mq(md) {
+        width: 100%;
+      } 
+      
     }
-          
-    @include mq(md) {
-      width: 100%;
-    }
+
     
   }
   
