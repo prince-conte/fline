@@ -1,0 +1,120 @@
+.clients-slider {
+  position: relative;
+  margin: 2rem 0 6rem;
+  
+  @include mq(sm) {
+      margin: 3rem 0;
+  }
+    
+  @include mq(md) {
+      margin: 3.5rem 0;
+  }
+  
+  
+  &__item {
+    padding: 1rem;
+    margin: 0 1rem;
+    
+    @include mq(sm) {
+        margin: 0 1.5rem;
+    }
+  }
+  
+  &__image-box {
+    border: solid 1px #eeeeee;
+    box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0);
+    
+    &:hover {
+      border-color: transparent;
+      box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.1);
+    } 
+    
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .slick-list {
+    margin: 0 -1rem !important; // for slick
+    
+    @include mq(sm) {
+        margin: 0 -1.5rem !important; // for slick
+    }
+  }
+}
+
+  
+.clients-slider-navigate {
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  color: $color-brand2;
+  
+  &:hover {
+    color: $color-brand;
+  }
+
+  @include mq(xs) {
+    display: none;
+  }
+
+  i {
+    @include font(2.6rem,2.6rem);
+    transition: $transition-duration-base;
+  }
+  
+  &--prev {
+    left: -3rem; 
+  }
+
+  &--next {
+    right: -3rem; 
+  }
+}
+
+
+  .slick-dots {
+    position: absolute;
+    display: flex;
+    bottom : 0rem;
+    left: 50%;
+    transform: translate(-50%,0);
+    
+    @include mq(xs) {
+      bottom : -2rem;
+    }
+    
+    li {
+      @include size(1rem);
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      
+      span {
+        @include size(100%);
+        position: absolute;
+        display: block;
+        left: 0;
+        top:0;
+        background: #e0e1e1
+      }
+      
+      
+      &:not(:last-child) {
+        margin-right: 1.3rem;
+      }
+    }
+    
+    .slick-active {
+      
+      span {
+        background: $color-brand2;
+      }
+    }
+  }

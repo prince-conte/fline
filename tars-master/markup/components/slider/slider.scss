@@ -52,8 +52,7 @@
         @include mq(md) {     
           width: 50%;
         }
-      }
-      
+      } 
     }
     
     
@@ -64,9 +63,11 @@
 
         @include mq(sm) {
           @include grid();
+          justify-content: space-between;
         }     
         @include mq(md) {
           @include grid();
+          justify-content: space-between;
         }
         
       }
@@ -83,7 +84,7 @@
         @include mq(sm) {
           margin-bottom: 3rem;
           br {
-            display: block;
+            display: none;
           }
         }
                 
@@ -92,6 +93,12 @@
           br {
             display: block;
           }
+        }
+      }
+      
+      .slider__slide-title-full--max-margin {
+        @include mq(md) {
+          margin-bottom: 7rem;
         }
       }
       
@@ -155,6 +162,13 @@
       margin-bottom: 2rem;
       font-weight: 300; 
     } 
+    
+    &--max-margin {
+      @include mq(md) {
+        margin-bottom: 7rem;
+      }
+    }
+    
   }
     
   &__slide-description {
@@ -250,13 +264,17 @@
       @include grid-cols(1,3);
     }
     
-    span {
-      @include font(1.6rem,2rem);
-      position: relative; 
+    div {
+      position: relative;
       display: inline-block;
-      color: #fff;
-      font-weight: 700;
-      text-decoration: underline;
+      span {
+        @include font(1.6rem,2rem);
+        position: relative; 
+        display: inline-block;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: underline;
+      }
     }
     
     i {
@@ -266,7 +284,7 @@
       transform: translate(-90%,-50%);
       background-size: contain;
       background-position: 50% 50%;
-
+      background-repeat: no-repeat;
     }
     
     .icon-one {
@@ -297,6 +315,119 @@
         height: 3rem;
       }
     }
+                
+    .icon-four {
+      width: 5rem;
+      height: 7rem;
+      background-image: url(../img/general/icon/s4.png);
+      @include mq(xs) {
+        width: 4rem;
+        height: 3rem;
+      }
+    }
+                    
+    .icon-five {
+      width: 5.5rem;
+      height: 5rem;
+      background-image: url(../img/general/icon/s5.png);
+      @include mq(xs) {
+        width: 4rem;
+        height: 3rem;
+      }
+    }
+    
+    
+    &--slider-four-link {
+      
+      
+      padding-left: 3rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      
+      @include mq(xs) {     
+        padding: 1rem 0 1rem 3rem;
+      }
+      
+      @include mq(sm) {     
+        @include grid-cols(1.2,4);
+        @include grid-col();
+      }
+
+      @include mq(md) {     
+        @include grid-cols(1.2,4);
+        @include grid-col();
+      }
+      
+      div {
+        position: relative;
+        display: inline-block;
+        text-align: left;
+
+        @include mq(xs) {
+          display: block;
+        }  
+        
+        span {
+          text-decoration: none;
+        }
+
+        p {
+          @include font(1.3rem,1.6rem);
+          display: inline-block;
+          display: block;
+          margin-top: .8rem;
+          color: #fff;
+          font-weight: 400;
+          text-align: left;
+          text-decoration: none;
+          
+          @include mq(sm) {
+            @include font(1.3rem,1.6rem);
+            br {
+              display: none;
+            }
+          }    
+          
+          @include mq(md) {
+            @include font(1.6rem,2rem);
+            br {
+              display: block
+            }
+          }
+        }
+      }
+      
+      
+      i {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-90%,-20%);
+        background-size: contain;
+        background-position: 50% 50%;
+      }
+      
+      .icon-one {
+        transform: translate(-90%,-17%);
+        
+        @include mq(xs) {
+          @include size(4rem);
+        }
+      }
+      
+      @include mq(ms) {
+        @include size(4rem);
+        text-align: left;
+        padding-left: 3rem;
+      }
+
+      @include mq(md) {
+        text-align: left;
+        padding-left: 3rem;
+      }
+    }
+    
+    
   } 
   
   &--footer {
