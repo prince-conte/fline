@@ -172,6 +172,7 @@ h5 {
     margin-bottom: 1.5rem;
     
     @include mq(sm) { 
+      @include font(2.4rem, 3.2rem);
       margin-bottom: 2rem;
     }
   }
@@ -271,15 +272,4 @@ table {
 // Textarea
 textarea {
   resize: none;
-}
-
-
-// tables
-
-.vertical-top {
-  vertical-align: top !important;
-}
-
-.vertical-text {
-	writing-mode: tb;
 }

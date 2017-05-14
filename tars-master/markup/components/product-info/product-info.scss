@@ -1,8 +1,5 @@
 .product-info {
 
-    @include mq(md) {
-      @include grid();
-    }
     
     &__container {
       
@@ -31,6 +28,15 @@
       @include grid-col();
       margin-bottom: 0;
     }
+    
+    &--1-5 {
+      @include mq(md) {
+        @include grid-cols(1,5);
+        @include grid-col();
+        margin-bottom: 0;
+      }
+    }
+    
   }
   
   &__grid-item-image {
@@ -47,5 +53,13 @@
     line-height: 1.2;
   }
   
+  &__button-block {
+    margin: 2rem 0;
+    
+    @include mq(sm) {
+      margin: 3rem 0;
+    }
+    
+  }
   
 }

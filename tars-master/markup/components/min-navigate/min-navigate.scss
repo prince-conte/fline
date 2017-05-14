@@ -1,0 +1,45 @@
+.min-navigate {
+  margin: 2.5rem 0;
+
+  @include mq(sm) {
+    display: flex;
+    margin: 3rem 0;
+  }
+  
+  @include mq(md) {
+    margin: 4rem 0;
+  }
+  
+  li {
+    @include font(1.6rem, 2rem);
+    order: 1;
+    
+    @include mq(xs) {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }  
+    }
+    
+    @include mq(sm) {
+      margin-right: 3rem; 
+    }
+    
+    a {
+      display: inline-block;
+      border-bottom: solid 1px;
+      color: $color-brand;
+    }
+    
+  }
+  
+  .is-active {
+    order: 2;
+    
+    a {
+      color: $color-base;
+      border-color: transparent;
+    }
+  }
+  
+  
+}

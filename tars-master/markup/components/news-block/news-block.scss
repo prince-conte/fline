@@ -208,10 +208,11 @@
     }
   }
   
-  &--thematic {
+  &--alternate {
     
     @include mq(xs) {
-      margin: 2rem 0;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
       
       .news-block__top-notice-box {
         &:not(:last-child) {
@@ -221,7 +222,8 @@
     }
         
     @include mq(sm) {
-      margin: 3rem 0;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
       
       .news-block__top-notice-box {
         
@@ -236,7 +238,8 @@
     }
         
     @include mq(md) {
-      margin: 3rem 0;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
       
       .news-block__top-notice-box {
         

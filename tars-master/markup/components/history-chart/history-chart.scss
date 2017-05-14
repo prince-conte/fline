@@ -24,6 +24,7 @@
   }
   
   &__image-pad {
+    display: none;
     
     @media (max-width: 1500px) and (min-width: 768px) {
       display: block;

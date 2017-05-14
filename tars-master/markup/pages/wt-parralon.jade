@@ -1,0 +1,142 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../components/head/head
+  include ../components/example/example
+  include ../components/header/header
+  include ../components/footer/footer
+  include ../components/navigate/navigate
+  include ../components/card-slider/card-slider
+  include ../components/slider/slider-three
+  include ../components/category-menu-block/category-menu-block
+  include ../components/download-catalog-block/download-catalog-block
+  include ../components/product-card/product-card
+  include ../components/page-paginator/page-paginator
+  include ../components/title-block/title-block
+  include ../components/product-info/product-info
+  include ../components/product-table/product-table
+  include ../components/adventage-block/adventage-block
+  include ../components/back-to-top/back-to-top
+
+  head
+    +head(head.defaults)
+  body.page#top
+    |%=symbols=%
+    +header()
+    main.page__wrapper#main
+      .page-paginator
+        .container
+          ul.page-paginator__grid
+            li.page-paginator__item
+              a(href='#') Главная страница  
+              span <i class='mdi mdi-chevron-right'></i>
+              a(href='#') Продукция
+              span <i class='mdi mdi-chevron-right'></i>
+              a.is-active(href='#') Стандартный поролон ST
+
+      
+      section
+        .container
+          .section-box.section-box--min
+            h1 Вторичный вспененный поролон
+            .section-box.section-box--min
+              .product-card
+
+                .product-card__slider-box
+                  .card-slider.js-card-slider
+
+                    .card-slider__item
+                      img(src='static/img/general/card/wt1.jpg' alt='ФомЛайн')
+                      
+                    .card-slider__item
+                      img(src='static/img/general/card/rulon.jpg' alt='ФомЛайн')
+                      
+                      
+                  .card-slider-nav
+                    .card-slider-nav__container
+
+                      .card-slider-nav__item.js-card-switch
+                        img(src='static/img/general/card/wtmin.jpg' alt='ФомЛайн')
+
+                      .card-slider-nav__item.js-card-switch
+                        img(src='static/img/general/card/wtmin2.jpg' alt='ФомЛайн')   
+
+                  .card-slider-nav
+                    .card-slider-nav__container
+                    
+                .product-card__description.typography
+                
+                  .product-card__description-content 
+                    p Вторично вспененный поролон - это новый материал с заданными свойствами полученный из эластичного ППУ, предварительно измельченного до размера хлопьев с последующим их соединением под действием химически активных клеящих веществ и давления. Преимущества ППУ вторичного вспененного перед другими материалами
+                  
+
+                  .product-card__description-label
+
+                    .product-card__description-label-image
+                      img(src='static/img/general/card/label.jpg' alt='ФомЛайн')
+
+                    .product-card__description-label-content
+                      p Продукция* сертифицирована в соответствии с европейскими стандартами безопасности пен CertiPUR® <em><span>*</span> Продукция заводов<br>г. Рошаль и г. Санкт-Петербург</em>
+            
+            .section-box--min.typography
+              .product-info
+                .product-info__container
+
+                  ul 
+                  
+                    li Высокая износостойкость (физико-механические показатели этого материала сохраняются после воздействия длительной циклической нагрузки – 250 000 и более циклов нагружения) 
+                              
+                    li Оптимальное соотношение упругости и податливости, как при больших так и малых нагрузках)
+                    
+                    li Амортизирующая способность в широком интервале температур (от -25ºС до +80ºС) 
+                                
+                    li Высокие показатели тепло-шумоизоляции
+                    
+                  .product-info__button-block
+                    a.gui-link-button(href='#') Показать полностью <i class='mdi mdi-chevron-right'></i>
+
+
+
+                  .section-box--min
+                    .product-info__grid
+
+                      .product-info__grid-item.product-info__grid-item--1-5
+                        .product-info__grid-item-image
+                          img(src='static/img/general/card/adp/1.png' alt='ФомЛайн')
+                        .product-info__grid-item-title Долговечный
+
+
+                      .product-info__grid-item.product-info__grid-item--1-5
+                        .product-info__grid-item-image
+                          img(src='static/img/general/card/adp/2.png' alt='ФомЛайн')
+                        .product-info__grid-item-title Высокая несущая<br>способность
+
+
+                      .product-info__grid-item.product-info__grid-item--1-5
+                        .product-info__grid-item-image
+                          img(src='static/img/general/card/adp/3.png' alt='ФомЛайн')
+                        .product-info__grid-item-title Вторичное<br>всенивание
+
+
+                      .product-info__grid-item.product-info__grid-item--1-5
+                        .product-info__grid-item-image
+                          img(src='static/img/general/card/adp/4.png' alt='ФомЛайн')
+                        .product-info__grid-item-title Амортизирующие<br>свойства
+
+
+                      .product-info__grid-item.product-info__grid-item--1-5
+                        .product-info__grid-item-image
+                          img(src='static/img/general/card/adp/5.png' alt='ФомЛайн')
+                        .product-info__grid-item-title Звукопоглощающие<br>свойства
+
+
+      +slider-three()
+
+    +footer()
+    +back-to-top()
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

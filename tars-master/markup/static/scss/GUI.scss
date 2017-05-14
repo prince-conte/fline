@@ -85,6 +85,11 @@
     @include font(1.8rem, 2.4rem);
     font-weight: 300;
 
+    @include mq(xs) { 
+      position: relative;
+      top: .3rem;
+    }
+    
     @include mq(sm) { 
       @include font(2.4rem, 3.2rem);
     }

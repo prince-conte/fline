@@ -74,7 +74,7 @@
   
   &__title-tab {
     border-top: 1px solid #fff; 
-    height: 93px;
+    height: 104px;
   }
   
   &__no-padding {
@@ -85,7 +85,9 @@
   }
   
   &__padding-min {
+    @include font(.2rem,.2rem);
     padding: 0rem !important; 
+    transform: scale(1.5);
   }
 
   &__title-min {
@@ -104,6 +106,12 @@
       padding: .3rem !important; 
       text-align: center;
     }
+  }
+  
+  
+  &--h {
+    font-size: 1.1rem;
+    transform: scale(1);
   }
   
   

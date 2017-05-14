@@ -57,3 +57,14 @@
   }
 }
 
+// tables
+
+.vertical-top {
+  vertical-align: top !important;
+}
+
+.vertical-text {
+  transform: translate(26%, 145%) rotate(-90deg);
+  transform-origin: 0 0;
+}
+

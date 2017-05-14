@@ -1,0 +1,71 @@
+.notice-paginator {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  
+  
+  &__item {
+    min-width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .4rem;
+    transition: $transition-duration-base;
+    border-radius: 2px;
+    background: #eeefef;
+    
+    
+    &:hover {
+      background: #8fba41;
+      
+      a {
+        color: #fff; 
+      }
+    }
+        
+    &:active {
+      background: #89b33c;
+      
+      a {
+        color: #fff; 
+      }
+    }
+    
+    &:not(:last-child) {
+      margin-right: .5rem;
+    }
+    
+    @include mq(sm) {
+      min-width: 4rem;
+      height: 4rem;
+    }
+    
+    a {
+      @include font(1.4rem,1.4rem);
+      color: $color-base;
+      
+      @include mq(sm) {
+        @include font(1.6rem,1.6rem);
+      }
+    }
+    
+    &--arrows {
+      @include font(2.2rem,2.2rem);
+      background: transparent;
+      
+      @include mq(sm) {
+        @include font(1.6rem,1.6rem);
+      }
+    }
+    
+  }
+  
+  .is-active {
+    background: $color-brand2;
+    a {
+      color: #fff;
+    }
+  }
+
+}
