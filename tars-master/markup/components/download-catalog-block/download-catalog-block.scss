@@ -1,6 +1,5 @@
 .download-catalog-block {
   display: flex;
-  margin: 4rem 0;
   
   @include mq(xs) {
     flex-direction: column-reverse;

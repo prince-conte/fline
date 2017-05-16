@@ -12,6 +12,11 @@
     margin: 3rem 0;
   }
   
+  &__grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  }
   
   &__item {
     display: inline-block;
@@ -24,6 +29,15 @@
   span {
     display: inline-block;
     margin: 0 1rem;
+    line-height: 1;
     color: $color-base-light;
   }
+  
+  i {
+    position: relative;
+    transform: translateY(.1rem);
+    line-height: 1;
+  }
+  
+  
 }

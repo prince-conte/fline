@@ -1,0 +1,53 @@
+.index-about {
+  
+  &__hidden-content {
+    display: none;
+  }
+
+  &__switch {
+    
+    &--is-mobile {
+      display: block;
+      
+      @include mq(sm) {
+       display: none !important;
+      }
+    }
+        
+    &--not-mobile {
+      display: block;
+      
+      @include mq(xs) {
+       display: none !important;
+      }
+    }
+            
+    &--is-open {
+      display: none;
+    }
+                
+    &--is-hidden {
+      
+    }
+    
+    
+    
+  }
+  
+  
+  .is-active {
+    
+    .index-about__switch--is-open {
+      display: inline;
+    }
+        
+    .index-about__switch--is-hidden {
+      display: none;
+    }
+    
+  }
+  
+  
+}
+
+  

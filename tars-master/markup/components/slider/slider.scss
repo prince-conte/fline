@@ -6,6 +6,11 @@
     padding: 0;
     outline: none;
   }
+
+  @include mq(md) {
+    margin-bottom: 8rem;
+    margin-bottom: 8rem;
+  }
   
   &__slide-box {
     @include size(100%);
@@ -31,7 +36,7 @@
 
       @include mq(md) {     
         width: 60%;
-        margin-top: -3rem;
+        margin-top: -2rem;
       }
       
       .gui-link-button {
@@ -98,7 +103,7 @@
       
       .slider__slide-title-full--max-margin {
         @include mq(md) {
-          margin-bottom: 7rem;
+          margin-bottom: 4rem;
         }
       }
       
@@ -115,19 +120,12 @@
                 
         @include mq(sm) {
           @include font(1.6rem,2.2rem);
-          margin-top: 3rem;
+          margin-top: 2rem;
           br {
             display: block;
           }
         }
                 
-        @include mq(md) {
-          @include font(2rem,3.2rem);
-          margin-top: 3rem;
-          br {
-            display: block;
-          }
-        }
       }
     }  
   }
@@ -138,14 +136,9 @@
     color: #fff;
 
     @include mq(sm) {     
-      @include font(3rem, 3.5rem);
+      @include font(2.8rem, 3.2rem);
     }
-      
-    @include mq(md) {     
-      @include font(4rem, 4.5rem);
-      margin-bottom: 2rem;
-      font-weight: 300; 
-    } 
+
   }
      
   &__slide-title-full {
@@ -157,11 +150,6 @@
       @include font(3rem, 3.5rem);
     }
       
-    @include mq(md) {     
-      @include font(3.8rem, 4.5rem);
-      margin-bottom: 2rem;
-      font-weight: 300; 
-    } 
     
     &--max-margin {
       @include mq(md) {
@@ -173,12 +161,12 @@
     
   &__slide-description {
     @include font(1.3rem, 2rem);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     color: #fff;
     
     @include mq(sm) {     
-      @include font(1.6rem, 2rem);
-      margin-bottom: 3rem;
+      @include font(1.4rem, 1.8rem);
+      margin-bottom: 2rem;
       font-weight: 300;
     }
     
@@ -200,12 +188,16 @@
   .slick-dots {
     position: absolute;
     display: flex;
-    bottom : 4rem;
+    bottom : 2rem;
     left: 50%;
     transform: translate(-50%,0);
     
     @include mq(xs) {
       display: none !important;  
+    }
+        
+    @include mq(sm) {
+      bottom : 4rem;
     }
     
     li {
@@ -248,8 +240,8 @@
     @include hover(color, $color-brand2);
     position: relative;
     display: block;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-align: center;
     
     @include mq(xs) {     
@@ -341,8 +333,6 @@
       
       
       padding-left: 3rem;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
       
       @include mq(xs) {     
         padding: 1rem 0 1rem 3rem;
@@ -431,17 +421,18 @@
   } 
   
   &--footer {
+    margin-bottom: 0;
     
     @include mq(xs) {
-      margin-top: 4rem
+      margin-top: 4rem;
     }
         
     @include mq(ms) {
-      margin-top: 4rem
+      margin-top: 4rem;
     }
             
     @include mq(md) {
-      margin-top: 6rem
+      margin-top: 6rem;
     }
     
     

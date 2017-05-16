@@ -13,6 +13,10 @@
     padding-bottom: 3.4rem;
   }
   
+  &__tilte {
+    margin-bottom: 0;
+  }
+  
   &__grid {
     
     @include mq(sm) {
@@ -25,13 +29,9 @@
     }
   }
    
-  .title-block__title {
+  &__title {
     @include h1();
-    
-    
-    @include mq(xs) {
-      margin-bottom: 1.5rem;
-    }    
+     
     @include mq(sm) {
       width: 50%;
     }
@@ -115,7 +115,10 @@
     } 
   }
   
-  
+  &--article-page {
+    margin: 1.5rem 0;
+    border-bottom: 0;
+  }
   
   
 }

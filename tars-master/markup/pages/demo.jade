@@ -1,0 +1,109 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../components/head/head
+  include ../components/example/example
+  include ../components/header/header
+  include ../components/footer/footer
+  include ../components/navigate/navigate
+  include ../components/slider/slider
+  include ../components/slider/slider-two
+  include ../components/category-menu-block/category-menu-block
+  include ../components/download-catalog-block/download-catalog-block
+  include ../components/branches/branches
+  include ../components/news-block/news-block
+  include ../components/back-to-top/back-to-top
+
+  head
+    +head(head.defaults)
+  body.page#top
+    |%=symbols=%
+    +header()
+    main.page__wrapper#main
+      .section-box
+        .container
+          .typography
+          
+            h1 Добрый день! Это демо страница!
+            
+            p Прошу обратить внимание на то, что это лишь верстка (шаблоны), они заполняются реальным контентом после интегрции в CMS систему.
+
+            p
+              b Актуальность верстки
+          
+            p Некоторые правки уже были внесены, но не все! Так же на некоторых страницах используются "рыбные" картинки, для более удобной и быстрой интеграции верстки.
+         
+
+            p
+              b Список страниц:
+          
+         
+            ul
+            
+              li <a href='index.html' target='_blank'>Главная</a>
+              
+              li <a href='production.html' target='_blank'>Каталог 1 (Продукция)</a>
+              
+              li <a href='all-production.html' target='_blank'>Каталог 2 (Вся продукция)</a>
+
+              li <a href='mattresses-cat.html' target='_blank'>Каталог 3 (Наполнение для матрасов и подушек)</a>
+                                                                     
+              li <a href='special-products.html' target='_blank'>Каталог 4 (Специальная продукция и детали)</a>
+                  
+              li <a href='product-page.html' target='_blank'>Страница товара (Стандартный поролон ST)</a>
+                                          
+              li <a href='rulon.html' target='_blank'>Страница товара (Товар рулонный поролон)</a>
+                                                       
+              li <a href='special-products.html' target='_blank'>Специальная продукция и детали</a>
+                                                  
+              li <a href='wt-parralon.html' target='_blank'>Вторичный вспененный поролон</a>
+                                    
+              li <a href='about.html' target='_blank'>О компании</a>
+                                     
+              li <a href='news.html' target='_blank'>Новости (раздед)</a>
+                    
+              li <a href='news-page.html' target='_blank'>Новость (Внутренняя)</a>
+              
+              li <a href='article-page.html' target='_blank'>Статья</a>
+       
+              li <a href='partners.html' target='_blank'>Партнерам</a>
+
+          
+            h3 Размеры картинок в блок-слайдерах:
+            
+            p
+              b Слайдер вверху первой страницы:
+                
+            
+            ul
+            
+              li desktop 1920 x 325px
+                      
+              li iPad 768 x 350px
+                                
+              li mobile 320 x 350px
+                
+                
+            h3 Размеры картинок в блок-слайдерах:
+            
+            p
+              b Остальные слайд-блоки (блоки шириной в 100%)
+                
+            
+            ul
+            
+              li desktop 1920 x 430px
+                      
+              li iPad 768 x 350px
+                                
+              li mobile 320 x 350px
+          
+
+    +footer()
+    +back-to-top()
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

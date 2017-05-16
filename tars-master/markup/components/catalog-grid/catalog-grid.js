@@ -19,7 +19,6 @@ $(function(){
       autoplaySpeed: 500,
       dots: false
     });
-   } 
     
     var $this = $(this);
 
@@ -34,17 +33,16 @@ $(function(){
       $this.slick('slickPause');
 
     });
+    
+   } 
+
   }
 
   
   $(window)
       .load(function() {
           initCatalogSlider();
-      })
-      .resize(function() {
-          initCatalogSlider();
       });
-
 
 });
   
