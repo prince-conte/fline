@@ -1,4 +1,9 @@
 .article-block {
+    margin: 2rem 0;
+
+    @include mq(sm) {
+      margin: 3rem 0;
+    }
   
   &__grid {
     margin: 2rem 0;
