@@ -65,7 +65,7 @@
     text-transform: uppercase;
     
     @include mq(md) {
-      padding: 4rem 3.5rem; 
+      padding: 3rem; 
     }
   } 
   
@@ -115,9 +115,6 @@
         margin-bottom: .8rem;
       }
 
-      @include mq(md) {
-        @include font(1.1rem, 2rem);
-      }
       
       &:hover {
         i {
@@ -133,6 +130,7 @@
 
       a {
         @include hover(color, #fff);
+        white-space: nowrap; 
         color: #fff;
       }
     }

@@ -34,10 +34,11 @@ main {
 }
 
 .section-box {
-  margin: 4rem 0;
+  margin: 2rem 0;
+
   
   @include mq(md) {
-    margin: 7rem 0;
+    margin: 4rem 0;
   }  
   
   &--min {
@@ -289,29 +290,28 @@ h5 {
 
   
   
-  iframe {
-    margin: 1.5rem auto;
-    width: 100%;
-    height: 27rem !important;
-    vertical-align: top;
-    border-radius: 4px;
-    
-    &:first-child {
-      margin-top: 0;
-    }  
-    
-    &:last-child {
-      margin-bottom: 0;
-    } 
-    
-    @include mq(md) { 
-      margin: 3rem auto;
-      height: 38rem;
-    }    
-    @include mq(md) { 
-      height: 60rem !important;
+  // Video
+  &__video {
+    position: relative;
+    padding-bottom: 56.25%; // 16:9
+    height: 0;
+
+    &:not(:first-child) {
+      margin-top: 4rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    > iframe {
+      @include size(100%);
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
+
   
   
 }

@@ -1,5 +1,10 @@
 .download-catalog-block {
   display: flex;
+  margin-top: 2rem;
+
+  @include mq(sm) {
+    margin-top: 3rem;
+  }
   
   @include mq(xs) {
     flex-direction: column-reverse;
@@ -34,9 +39,9 @@
     }
     
     &--big {
-    @include mq(md) {
-      width: 30rem;
-    } 
+      @include mq(md) {
+        width: 30rem;
+      } 
     }
     
     i {
@@ -63,8 +68,7 @@
         @include font(1.3rem,1.8rem);
         margin-bottom: -.5rem;
       }
-      
-      
+       
       span {
         @include font(1.1rem,1.6rem);
         display: block;
@@ -74,11 +78,8 @@
         @include mq(md) {
           @include font(1.3rem,1.4rem);
         }
-      }
-      
-      
+      } 
     }
-    
   }
     
   &__description-link {
@@ -91,15 +92,8 @@
     }     
     
     @include mq(md) {
+      margin-left: 3rem;
       width: auto;
-      padding-left: 3rem;
-    }
-
-    
-    
+    } 
   }
-  
-  
-  
-  
 }

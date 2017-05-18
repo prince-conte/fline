@@ -3,9 +3,6 @@
     
     &__container {
       
-      @include mq(md) {
-        @include grid-cols(2,3);
-      }
     }
   
   &__grid {
