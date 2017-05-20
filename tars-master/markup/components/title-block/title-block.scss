@@ -122,4 +122,17 @@
   }
   
   
+  &--section-navigate {
+    padding-bottom: 0;
+    
+    .title-block__title {
+      margin-bottom: 1.6rem;
+
+      @include mq(md) {
+        margin-bottom: 2.4rem;
+      }
+    } 
+  }
+  
+  
 }

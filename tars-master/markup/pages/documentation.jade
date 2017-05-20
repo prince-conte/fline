@@ -1,0 +1,52 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../components/head/head
+  include ../components/example/example
+  include ../components/header/header
+  include ../components/footer/footer
+  include ../components/navigate/navigate
+  include ../components/slider/slider
+  include ../components/slider/slider-three
+  include ../components/category-menu-block/category-menu-block
+  include ../components/download-catalog-block/download-catalog-block
+  include ../components/branches/branches
+  include ../components/page-paginator/page-paginator
+  include ../components/title-block/title-block
+  include ../components/back-to-top/back-to-top
+  include ../components/section-navigate/section-navigate
+  include ../components/document-link-grid/document-link-grid
+
+  head
+    +head(head.defaults)
+  body.page#top
+    |%=symbols=%
+    +header()
+    main.page__wrapper#main
+      .page-paginator
+        .container
+          ul.page-paginator__grid
+            li.page-paginator__item
+              a(href='#') Главная страница  
+              span <i class='mdi mdi-chevron-right'></i>
+              a.is-active(href='#') Документация
+      
+      
+      section
+        .container
+          .title-block.title-block--section-navigate
+            .title-block__grid 
+              h1.title-block__title.title-block__title--full Документация
+            +section-navigate()
+            
+          .section-box
+            +document-link-grid()
+            
+    +footer()
+    +back-to-top()
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

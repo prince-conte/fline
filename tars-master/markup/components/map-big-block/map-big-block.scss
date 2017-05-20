@@ -1,0 +1,114 @@
+.map-big-block {
+  position: relative;
+  
+  @include mq(xs) {
+    min-height: 74rem;    
+  }
+    
+  @include mq(sm) {
+    min-height: 74rem;    
+  }
+  
+  &__map-box {
+    @include size(100%);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 120;
+
+    .container {
+      position: relative;
+      height: 100%
+    }
+  }
+  
+  &__grid {
+    @include size(100%);
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    
+    @include mq(sm) {
+      @include grid();
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  
+  &__item {
+    width: 100%;
+    
+    
+    @include mq(xs) {
+     padding: 0 2rem; 
+    }
+    
+    @include mq(sm) {
+      @include grid-cols(3,4);
+      @include grid-col();
+    }
+        
+    @include mq(md) {
+      @include grid-cols(1.5,4);
+    }  
+  }
+  
+  &__item-box {
+    position: relative;
+    padding: 1.5rem;
+    background: #fff;
+    
+    @include mq(sm) {
+      padding: 3rem;
+    }  
+  }
+  
+  &__content {
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #ebeded;
+    
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+      margin-bottom: 3rem;
+    }
+    
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    
+    p {
+      @include font(1.3rem,2rem);
+      color: #747474;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+    
+  }
+  
+  &__close {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -4rem;
+    color: #fff;
+    
+    &:hover {
+      color: $color-brand;
+    }
+    
+    i {
+      @include font(3.4rem,3.4rem);
+    }
+    
+  }
+  
+  
+}

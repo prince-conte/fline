@@ -1,0 +1,65 @@
+.section-navigate {
+  
+  @include mq(sm) {
+    @include grid();
+  }
+  
+  
+  &__item {
+    
+    @include mq(sm) {
+      @include grid-cols(1,3);
+      @include grid-col();
+    }
+    
+    a {
+      @include font(1.6rem,1.8rem);
+      display: inline-block;
+      color: $color-base;
+ 
+      @include mq(xs) {
+        margin-bottom: 1.4rem;
+        color: $color-brand;
+        text-decoration: underline;
+      }
+      
+      @include mq(sm) {
+        @include font(1.6rem,2rem);
+        padding-bottom: 1.4rem;
+        transform: translateY(1px);
+        border-bottom: 2px solid transparent;
+        white-space: nowrap;
+        
+        
+        &:hover {
+          color: $color-brand;
+          border-color: $color-brand;
+        }
+        
+      }
+
+      @include mq(md) {
+        @include font(2rem,2.4rem);
+        padding-bottom: 1.9rem;
+      }
+    }
+
+    
+  }
+  
+  
+  .is-active {
+    
+    a {
+      @include mq(xs) {
+        color: $color-base;
+        text-decoration: none;
+      }
+
+      @include mq(sm) {
+        color: $color-brand;
+        border-color: $color-brand;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.map-navigation-block {
+  @include mq(sm) {
+    @include grid();
+  }
+  
+  
+  &__input-block {
+    position: relative;
+    overflow: hidden;
+    
+    @include mq(sm) {
+      @include grid-cols(1,5);
+      @include grid-col();
+      margin-bottom: 3rem;
+    }
+    
+    @include mq(md) {
+      @include grid-cols(1,5);
+    }
+    
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    } 
+  }
+  
+  &__icon {
+    position: absolute;
+    display: block;
+    top: -.2rem;
+    right: 0;
+    height: 100%;
+    padding: 1.2rem 1.5rem 1.1rem;
+    color: $color-brand;
+
+    > i {
+      @include font(2rem, 2rem);
+    }
+
+    @include mq(sm) {
+      right: 1.5rem;
+    }
+  }
+  
+  
+  input {
+    @include font(1.3rem, 1.3rem);
+    display: block;
+    padding: 1.2rem 5rem 1.1rem 1.5rem;
+    width: 100%;
+    border: 1px solid $color-base-lighter;
+    color: $color-base;  
+  }
+  
+  &__input-button {
+    @include font(1.3rem, 1.3rem);
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 1.4rem 1.5rem 1.3rem;
+    top: auto;
+    left: auto;
+    text-align: left;
+    background: $color-brand;
+    color: #fff
+  }
+  
+  
+  
+}

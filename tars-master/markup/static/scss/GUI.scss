@@ -3,6 +3,17 @@
 
 
 // Texts
+
+.big-brand-text {
+  @include font(6.4rem,7rem);
+  font-weight: 700;
+  color: $color-brand;
+  @include mq(xs) {
+    display: block;
+  }
+}
+
+
 @mixin text-small {
   @include font(1.2rem, 1.5rem);
 }
@@ -153,10 +164,22 @@
   }
   
   &--the-last-in-the-block {
-    margin: 0;
-    margin-top: auto;
+
+    @include mq(xs) {
+      margin-top: 1.5rem;
+    }
+    
+    @include mq(sm) {
+      margin-top: 2rem;
+    }
+        
+    @include mq(md) {
+      margin: 0;
+      margin-top: auto;
+    }
+    
+    
   }
-  
 }
 
 
@@ -177,9 +200,9 @@
   }  
   
   @include mq(sm) {
-    @include font(1.6rem, 1.6rem);
+    @include font(1.4rem, 1.4rem);
     display: inline-block;
-    padding: 1.7rem 3rem 1.6rem; 
+    padding: 1.5rem 3rem 1.3rem; 
   } 
     
   @include mq(md) {
@@ -217,3 +240,8 @@
   }
   
 }
+
+
+
+
+

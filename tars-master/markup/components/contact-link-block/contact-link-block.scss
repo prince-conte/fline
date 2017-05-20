@@ -1,0 +1,28 @@
+.contact-link-block {
+  
+  
+  a {
+    @include font(1.3rem,1.8rem);
+    position: relative;
+    display: block;
+    padding-left: 3rem;
+    color: #747474;
+    
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+    
+    &:hover {
+      color: $color-brand;
+    }
+    
+    i {
+      @include font(2.2rem,2.2rem);
+      position: absolute;
+      top: -.1rem;
+      left: 0;
+      color: $color-brand;
+    }
+  }
+
+}
