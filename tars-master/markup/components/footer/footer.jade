@@ -1,4 +1,9 @@
+include ../mobile-menu/mobile-menu
+
 mixin footer(data)
+
+  +mobile-menu()
+  
   footer.footer#footer
     nav.footer__navigate
       .container

@@ -1,0 +1,48 @@
+.mobile-fade {
+  @include size(100%);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $color-base;
+  opacity: .4;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 23rem;
+  padding: 4.5rem 0 2rem;
+  background: #fff; 
+  
+  
+  &__link {
+    @include font(1.4rem,1.6rem);
+    display: block;
+    color: $color-base;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2rem;
+  }
+  
+  .is-active {
+    color: $color-brand;
+  }
+  
+  
+  &__close {
+    position: fixed;
+    display: block;
+    top: 2.4rem;
+    left: 1.8rem;
+    
+    i {
+      @include font(2.6rem,2.6rem)
+      color: $color-brand;
+    }
+    
+  }
+  
+}
