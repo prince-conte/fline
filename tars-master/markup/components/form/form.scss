@@ -1,0 +1,47 @@
+.form {
+  
+  &__input-line {
+    @include mq(sm) {
+      @include grid()
+    }
+    
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+      
+      @include mq(xs) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  
+  &__input-block {
+    margin-bottom: 1rem;
+    
+    @include mq(sm) {
+      @include grid-cols(1,2);
+      @include grid-col();
+    }
+    
+    button {
+      width: 100%;
+      text-align: center;
+    }
+    
+  }
+  
+  
+  input {
+    @include font(1.3rem, 1.3rem);
+    display: block;
+    padding: 1.2rem 5rem 1.1rem 1.5rem;
+    width: 100%;
+    border: 1px solid $color-base-lighter;
+    color: $color-base;  
+  }
+  
+  &__description {
+    @include font(1.3rem,1.7rem);
+    color: #bababa;
+  }
+  
+}

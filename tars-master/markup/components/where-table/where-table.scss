@@ -1,0 +1,86 @@
+.where-table {
+  border: 1px solid $color-f-border;
+  margin-bottom: 4rem;
+  
+  &__box {
+    
+    @include mq(xs) {
+      overflow-x: scroll;
+    }
+        
+    @include mq(sm) {
+      overflow-x: scroll;
+    }
+            
+    @include mq(md) {
+      overflow-x: hidden;
+    }
+  }
+  
+  tr {
+      
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-f-border;
+    }
+  }
+  
+  th {
+    @include text-base();
+    padding: 2.5rem;
+    min-height: 4.5rem;
+    color: #fff;
+    font-weight: 700;
+    background: $color-brand;
+    text-align: left;
+
+    &:not(:last-child) {
+      border-right: 1px solid #1b5fb3;
+    }
+    
+    @include mq(xs) {
+      min-width: 15rem;
+    }
+            
+    @include mq(sm) {
+      min-width: 33.3333%;
+    }
+        
+    @include mq(md) {
+      min-width: 37rem;
+    }
+    
+    
+    td {
+      padding: 2.5rem;
+      color: #fff;
+      height: auto;
+      border-top: 1px solid #1b5fb3;
+      
+      &:not(:last-child) {
+        border-right: 1px solid #1b5fb3;
+      }
+
+    }
+  }
+  
+  td {
+    @include text-base();
+    padding: 1.5rem;
+    color: $color-base;
+    vertical-align: top;
+    
+    &:not(:last-child) {
+      border-right: 1px solid $color-f-border;
+    }
+    
+    @include mq(sm) {
+      padding: 2.5rem;
+    }
+    
+      
+    p {
+      color: #747474;
+    }
+  }
+  
+}

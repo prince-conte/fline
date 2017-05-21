@@ -1,7 +1,7 @@
 .contact-link-block {
   
   
-  a {
+  &__link {
     @include font(1.3rem,1.8rem);
     position: relative;
     display: block;
@@ -25,4 +25,45 @@
     }
   }
 
+  
+  &--typography {
+    
+    .contact-link-block__link {
+      a {
+        color: $color-brand;
+        text-decoration: underline;
+      }
+    }
+
+    
+    @include mq(sm) {
+    
+      .contact-link-block__link {
+        @include font(1.6rem,2.1rem);
+        position: relative;
+        display: block;
+        padding-left: 3.6rem;
+        color: #747474;
+        
+        &:hover {
+          color: #747474; 
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+
+
+        i {
+          @include font(2.8rem,2.8rem);
+          position: absolute;
+          top: -.1rem;
+          left: 0;
+          color: $color-brand;
+        }
+      }
+      
+    }
+  }
+  
 }

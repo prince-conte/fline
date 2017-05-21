@@ -1,0 +1,51 @@
+mixin contacts()
+
+  section-box
+    .container
+      .contacts
+        .contacts__item
+          .contacts__form-box
+            h2 Головной офис компании «ФомЛайн»
+            .contacts__link-block
+
+              a.contacts__link(href='#')
+                i.mdi.mdi-phone-in-talk
+                span +7 495 660-41-50
+
+              a.contacts__link(href='#')
+                i.mdi.mdi-clock
+                span По будням с 9:00 до 18:00
+
+              a.contacts__link(href='#')
+                i.mdi.mdi-map-marker-radius
+                span 127474, Россия, Москва, Дмитровское ш.,<br>60А, БЦ «Лихоборский»
+
+        .contacts__item.contacts__item--form
+          .contacts__form-box
+            h2 Напишите нам
+            .contacts__description Если у вас есть комментарии или вопросы, пожалуйста, заполните форму
+            form.form
+            
+              .form__input-line
+
+                .form__input-block
+                  input(placeholder='Ваше имя*')
+
+                .form__input-block
+                  input(placeholder='Телефон*')
+
+                .form__input-block
+                  input(placeholder='Email*')
+
+                .form__input-block
+                  input(placeholder='Город')
+
+              .form__input-line
+              
+                .form__input-block
+                  button.gui-link-button Отправить
+              
+                .form__input-block
+                  .form__description * Эти поля обязательно нужно заполнить
+                  
+      .contacts__map#mapy

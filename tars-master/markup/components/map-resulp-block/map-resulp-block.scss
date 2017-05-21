@@ -1,0 +1,50 @@
+.map-result-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ebecec;
+  
+  &__item {
+    
+    @include mq(xs) {
+      padding: 1.5rem 0;
+    }
+        
+    @include mq(sm) {
+      padding: 2rem 0;
+    }
+  }
+  
+  &__title {
+    @include font(1.3rem, 1.8rem);
+    white-space: nowrap;
+    
+    @include mq(sm) {
+      @include font(1.6rem, 2rem);
+    }
+  }
+  
+  
+  &__link {
+    
+    &:not(:last-child) {
+      margin-right: 1.6rem;
+    }
+    
+    i {
+      @include font(2.4rem, 2.4rem);
+      
+      @include mq(xs) {
+        @include font(2rem, 2rem);
+      }
+    }
+    
+    .mdi-map-marker {
+      color: $color-brand;
+    }
+    .mdi-format-list-bulleted {
+      color: $color-brand2;
+    }
+  }
+  
+}

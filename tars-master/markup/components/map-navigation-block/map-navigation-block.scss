@@ -3,24 +3,24 @@
     @include grid();
   }
   
-  
   &__input-block {
     position: relative;
     overflow: hidden;
     
+    @include mq(xs) {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      } 
+    }
+        
     @include mq(sm) {
       @include grid-cols(1,5);
       @include grid-col();
-      margin-bottom: 3rem;
     }
     
     @include mq(md) {
       @include grid-cols(1,5);
     }
-    
-    &:not(:last-child) {
-      margin-bottom: 2rem;
-    } 
   }
   
   &__icon {

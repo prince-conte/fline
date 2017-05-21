@@ -59,6 +59,18 @@ html(class="no-js", lang="ru")
           .section-box
             +map-navigation-block()
             
+          .map-result-block
+            .map-result-block__item
+              .map-result-block__title Найдено 100 точек продаж
+            
+            .map-result-block__item
+            
+              a.map-result-block__link(href='#')
+                i.mdi.mdi-map-marker
+              a.map-result-block__link(href='#')
+                i.mdi.mdi-format-list-bulleted
+            
+            
       .map-big-block#mapy
         .map-big-block__map-box.js-map-content(style='display: block')
           .container
@@ -74,15 +86,15 @@ html(class="no-js", lang="ru")
                     
                   .contact-link-block
                   
-                    a(href='#')
+                    a.contact-link-block__link(href='#')
                       i.mdi.mdi-map-marker
                       span Московская обл., Рошаль, ул. 2-й Пятилетки, 140730, Россия
                   
-                    a(href='#')
+                    a.contact-link-block__link(href='#')
                       i.mdi.mdi-phone
                       span +7 496 45-58-301; 58-302
                   
-                    a(href='#')
+                    a.contact-link-block__link(href='#')
                       i.mdi.mdi-email
                       span info@pres-ametist.ru
                       
