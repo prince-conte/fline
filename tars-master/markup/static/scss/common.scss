@@ -110,7 +110,24 @@ h2 {
   @include h2()
 }
 
+h3 {
+  @include h3()
+}
+
+h4 {
+  @include h4()
+}
+
+h5 {
+  @include h5()
+}
+
+h6 {
+  @include h6()
+}
+
 // Links
+
 a {
   @include hover(color, $color-brand);
   transition: $transition-duration-base;
@@ -166,12 +183,6 @@ ol, ul {
   list-style: none;
 }
 
-
-h5 {
-  @include h5();
-}
-
-
 .typography {
   
   h2 {
@@ -183,7 +194,10 @@ h5 {
     }
   }
     
-  h3 {
+  h3,
+  h4,
+  h5,
+  h6 {
     @include h3();
     margin-bottom: 1.5rem;
   }
@@ -267,6 +281,45 @@ h5 {
       }
     }
   }
+  
+  
+  ol {
+    @include text-base();
+      margin: 1.5rem 0;
+      counter-reset: li;
+    
+    &:first-child {
+      margin-top: 0;
+    } 
+
+    &:last-child {
+      margin-bottom: 0;
+    } 
+
+
+    li {
+      padding: 0;
+    }
+
+    li:before {
+      @include size(auto);
+      opacity: .5;
+      top: 0;
+      left: auto;
+      background: transparent;
+      content: counter(li);
+      content: counter(li) '. ';
+      counter-increment: li;
+      position: relative;
+      display: inline-block;
+      margin-right: 1rem;
+      position: relative;
+    }
+  
+      
+  }
+    
+  
   
   img {
     margin: 1.5rem auto;

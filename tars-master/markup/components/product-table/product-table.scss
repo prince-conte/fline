@@ -78,6 +78,7 @@
   }
   
   &__no-padding {
+    width: 12.5rem;
     line-height: 1;
     padding-top: 0 !important; 
     padding-bottom: 0 !important; 
@@ -85,9 +86,8 @@
   }
   
   &__padding-min {
-    @include font(.2rem,.2rem);
+    @include font(.85rem,.85rem);
     padding: 0rem !important; 
-    transform: scale(1.5);
   }
 
   &__title-min {
@@ -110,8 +110,7 @@
   
   
   &--h {
-    font-size: 1.1rem;
-    transform: scale(1);
+    font-size: .91rem;
   }
   
   

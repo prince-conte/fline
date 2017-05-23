@@ -126,7 +126,44 @@
   }
 }
 
+@mixin h4 {
+  @include font(1.4rem, 1.8rem);
+  font-weight: 300;
+
+  @include mq(sm) { 
+    @include font(1.6rem, 2rem);
+  }
+  
+  @include mq(md) { 
+    @include font(2.2rem, 3rem);
+  }
+}
+
 @mixin h5 {
+  
+  @include mq(xs) {
+    @include font(1.6rem, 2.2rem);
+    margin: 0;
+    padding: 0;  
+    font-weight: 400;
+  }
+  
+  @include mq(sm) {
+    @include font(1.6rem, 3.6rem);
+    margin: 0;
+    padding: 0; 
+    font-weight: 400;
+  }
+
+  @include mq(md) {
+    @include font(1.8rem, 2.2rem);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;   
+  }
+}
+
+@mixin h6 {
   
   @include mq(xs) {
     @include font(1.6rem, 2.2rem);

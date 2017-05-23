@@ -5,6 +5,8 @@ $(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
+    infinite: true,
     fade: true,
     dots: false,
     customPaging: function(slider, i) {

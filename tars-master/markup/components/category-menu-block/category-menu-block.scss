@@ -70,16 +70,21 @@
   } 
   
   &__category-title {
-    @include font(1.2rem, 2.2rem);
+    @include font(1.2rem, 1.4rem);
     font-weight: 600;
     color: #fff;
     
     @include mq(xs) {
-      transform: translateY(-90%);
+      transform: translateY(-1.5rem);
+    }    
+        
+    @include mq(sm) {
+      transform: translateY(-1.5rem);
     }    
     
     @include mq(md) {
-      @include font(2.4rem, 2.8rem);
+      @include font(2.4rem,2.8rem);
+      transform: translateY(0);
     }
     
     i {
@@ -152,10 +157,5 @@
       text-transform: uppercase;
     }
   }
-  
 
-  
-  
-  
-  
 }
