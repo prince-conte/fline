@@ -6,6 +6,7 @@
   left: 0;
   background: $color-base;
   opacity: .4;
+  z-index: 106;
 }
 
 .mobile-menu {
@@ -16,7 +17,8 @@
   width: 23rem;
   padding: 4.5rem 0 2rem;
   background: #fff; 
-  
+  z-index: 106;
+
   
   &__link {
     @include font(1.4rem,1.6rem);

@@ -1,4 +1,24 @@
 mixin popup-form()
 
-  .mobile-fade.js-mobile-fade.js-mobile-menu-close
-  .popup-form
+  .mobile-fade.js-mobile-fade.js-mobile-menu-close(style='display: block')
+  .popup-form(style='display: block')
+    .popup-form__box
+      h2.popup-form__title Форма обратной связи
+      form.form
+      
+        .form__input-block-full
+          input(placeholder='Имя')
+            
+        .form__input-block-full
+          input(placeholder='Фамилия')
+  
+        .form__input-block-full
+          input(placeholder='Ваш e-mail')
+        
+        .form__input-block-full
+          select.js-select2(data-placeholder='Регион')
+            option Toskana
+            option Milan
+            option Napoli
+      
+  

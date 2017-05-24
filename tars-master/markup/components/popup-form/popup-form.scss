@@ -1,6 +1,32 @@
 .popup-form {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  background: #fff;
+  border-radius: 6px;
+  z-index: 106;
   
-  width: 35rem;
-  height: 46rem;
   
+  @include mq(sm) {
+    top: 50%;
+    left: 50%;
+    width: 35rem;
+    min-height: 46rem;
+    transform: translate(-50%,-50%);
+  }
+  
+  
+  &__box {
+    padding: 2rem;
+      
+    @include mq(sm) {
+      padding: 3rem
+    }
+  }
+  
+  &__title {
+    margin-bottom: 2.6rem;
+    text-align: center;
+  }
 }

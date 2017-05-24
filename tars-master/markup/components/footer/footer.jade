@@ -1,8 +1,9 @@
 include ../mobile-menu/mobile-menu
+include ../popup-form/popup-form
 
 mixin footer(data)
 
-  +mobile-menu()
+
   
   footer.footer#footer
     nav.footer__navigate
@@ -165,7 +166,8 @@ mixin footer(data)
             .footer__copyright &copy; 2017 Компания “ФомЛайн”
               
               
-
+  +mobile-menu()
+  +popup-form()
 
 
 
