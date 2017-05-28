@@ -29,7 +29,12 @@
   }
   
   &__input-block-full {
-    margin: 1rem 0
+    margin: 1rem 0;
+    
+    button {
+      width: 100%;
+      text-align: center;
+    } 
   }
   
   
@@ -46,5 +51,53 @@
     @include font(1.3rem,1.7rem);
     color: #bababa;
   }
-  
+
+  .checkbox {
+    @include size(1.6rem);
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: 2px;
+    border: 1px solid $color-base-lighter;
+    z-index: 2;
+
+    > input {
+      @include size(100%);
+      position: absolute;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      z-index: 3;
+
+      + span {
+        @include size(1.6rem);
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 2px;
+        z-index: 2;
+        
+        + i {
+          position: absolute;
+          top: -2px;
+          left: .1rem;
+          display: none;
+          color: $color-brand2;
+        }
+
+      }
+
+      &:checked + span + i {
+        display: block;
+      }
+    }
+  }
+
+  .label-checkbox {
+    @include font(1.3rem, 1.8rem);
+    position: relative;
+    display: block;
+    padding-left: 2.6rem;
+
+    }
 }

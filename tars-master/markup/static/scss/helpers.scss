@@ -146,6 +146,7 @@ select2-selection select2-selection--single
   border-right: 2px solid !important;
   margin: 0 !important;
   transform: translate(-50%,-50%) rotate(45deg);
+  transition: $transition-duration-base;
   border-radius: .2px;
     
 }
@@ -154,4 +155,11 @@ select2-selection select2-selection--single
   height: 100% !important;
   width: 3.5rem !important;
   top: 0 !important;
+}
+
+.select2-container--open {
+  b {
+    top: 60% !important;
+    transform: translate(-50%,-50%) rotate(225deg) !important;
+  }
 }

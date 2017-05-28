@@ -1,18 +1,22 @@
 .popup-form {
+
   position: fixed;
   display: none;
   left: 0;
   top: 0;
   background: #fff;
-  border-radius: 6px;
   z-index: 106;
-  
-  
+
+  @include mq(xs) {
+    @include size(100%);
+  }
+
   @include mq(sm) {
     top: 50%;
     left: 50%;
     width: 35rem;
     min-height: 46rem;
+    border-radius: 6px;
     transform: translate(-50%,-50%);
   }
   
@@ -29,4 +33,28 @@
     margin-bottom: 2.6rem;
     text-align: center;
   }
+  
+  &__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    
+    @include mq(sm) {
+      top: -4.4rem;
+      right: -3.4rem;
+    }
+
+    i {
+      color: $color-base;
+      @include font(2rem,2rem);
+
+      @include mq(sm) {
+        @include font(3.2rem,3.2rem);
+        color: #fff;
+      }
+    }  
+  }
+
+  
+  
 }

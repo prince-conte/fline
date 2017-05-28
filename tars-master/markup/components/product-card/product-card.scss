@@ -39,7 +39,7 @@
     }
         
     @include mq(sm) {
-      display: flex;  
+      display: flex;
       margin-top: 4rem;
     }
         
@@ -53,6 +53,15 @@
   }
   
   &__description-content {
+
+    @include mq(sm) {
+      width: 50%;
+      padding-right: 3rem;
+    }
+    
+    @include mq(md) {
+      width: 100%;  
+    }
     
     p {
       
@@ -62,8 +71,7 @@
 
       @include mq(sm) {
         @include font(1.3rem,1.8rem);
-        width: 50%;
-        padding-right: 4rem;
+        padding-right: 4rem;   
       }
 
       @include mq(md) {

@@ -1,7 +1,7 @@
 mixin popup-form()
 
   .mobile-fade.js-mobile-fade.js-mobile-menu-close(style='display: block')
-  .popup-form(style='display: block')
+  .popup-form.js-popup-form(style='display: block')
     .popup-form__box
       h2.popup-form__title Форма обратной связи
       form.form
@@ -20,5 +20,19 @@ mixin popup-form()
             option Toskana
             option Milan
             option Napoli
+             
+        .form__input-block-full
+          label.label-checkbox
+            span.checkbox
+              input(type='checkbox')
+              span
+              i.mdi.mdi-check
+            span Согласен с обработкой персональных данных
+            
+        .form__input-block-full   
+          button.gui-link-button Отправить
+          
+        a.popup-form__close.js-mobile-menu-close(href='#')
+          i.mdi.mdi-close
       
   

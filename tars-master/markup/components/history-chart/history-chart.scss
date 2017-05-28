@@ -160,16 +160,13 @@
     }
       
     
-    
     @include mq(md) {
       &:hover {
         
         .history-chart__grid-item-elips {
           transform: scale(1.5);
-//          padding: 1rem;
-          background-image: url(../img/general/el/1.png);
         }
-        
+
         .history-chart__grid-item-title {
           transform: translate(0,100%);
           opacity: 0;
@@ -190,13 +187,53 @@
         } 
       }
     }
-    
-    
-    
-    
-    
-    
   }
+  
+  .history-chart__grid-item:nth-child(1) {
+    
+    @include mq(md) {
+      &:hover {                 
+        .history-chart__grid-item-elips {
+          background-image: url(../img/general/el/1.png);
+        }
+      }
+    }
+  }
+      
+  .history-chart__grid-item:nth-child(2) {
+    
+    @include mq(md) {
+      &:hover {                 
+        .history-chart__grid-item-elips {
+          background-image: url(../img/general/el/2.png);
+        }
+      }
+    }
+  }
+    
+  .history-chart__grid-item:nth-child(3) {
+    
+    @include mq(md) {
+      &:hover {                 
+        .history-chart__grid-item-elips {
+          background-image: url(../img/general/el/3.png);
+        }
+      }
+    }
+  }
+  
+       
+  .history-chart__grid-item:nth-child(4) {
+    
+    @include mq(md) {
+      &:hover {                 
+        .history-chart__grid-item-elips {
+          background-image: url(../img/general/el/4.png);
+        }
+      }
+    }
+  }
+  
     
   &__grid-item-elips {
     display: inline-block;
