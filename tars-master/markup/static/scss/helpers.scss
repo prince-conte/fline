@@ -79,6 +79,13 @@ ul, menu, dir {
 }
 
 
+@media print {
+  .is-not-print {
+    display: none !important;
+  }
+}
+
+
 
 // select 2
 
