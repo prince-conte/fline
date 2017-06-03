@@ -48,6 +48,5 @@ $(window)
     })
     .smartresize(function() {
         $('.js-select').select2('close'); // Close select2 dropdown to prevent wrong repositioning
-
         setSelect2ContainerProperWidth();
     });

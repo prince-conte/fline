@@ -1,0 +1,94 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../components/head/head
+  include ../components/example/example
+  include ../components/header/header
+  include ../components/footer/footer
+  include ../components/navigate/navigate
+  include ../components/slider/slider
+  include ../components/slider/slider-three
+  include ../components/category-menu-block/category-menu-block
+  include ../components/download-catalog-block/download-catalog-block
+  include ../components/branches/branches
+  include ../components/page-paginator/page-paginator
+  include ../components/title-block/title-block
+  include ../components/back-to-top/back-to-top
+  include ../components/search-section/search-section
+
+  head
+    +head(head.defaults)
+  body.page#top
+    |%=symbols=%
+    +header()
+    main.page__wrapper#main
+      +page-paginator()
+      
+      
+      section
+        .container
+          .title-block
+            .title-block__grid 
+              h1.title-block__title.title-block__title--full Результаты поиска
+
+          .section-box.section-box--min.typography
+
+            article.search-result-item
+              h3 Компания «ФомЛайн» на 28-й международной выставке «Мебель-2016»
+              p 23-27 ноября 2015 года в московском «Экспоцентре» на Красной Пресне состоится очередная...
+
+              .base-button-box
+                a.gui-link-button(href='#')
+                  span Подробнее
+                  i.mdi.mdi-chevron-right
+
+
+            article.search-result-item
+              h3 Компания «ФомЛайн» на 28-й международной выставке «Мебель-2016»
+              p 23-27 ноября 2015 года в московском «Экспоцентре» на Красной Пресне состоится очередная...
+
+              .base-button-box
+                a.gui-link-button(href='#')
+                  span Подробнее
+                  i.mdi.mdi-chevron-right
+
+
+            article.search-result-item
+              h3 Компания «ФомЛайн» на 28-й международной выставке «Мебель-2016»
+              p 23-27 ноября 2015 года в московском «Экспоцентре» на Красной Пресне состоится очередная...
+
+              .base-button-box
+                a.gui-link-button(href='#')
+                  span Подробнее
+                  i.mdi.mdi-chevron-right
+
+
+            article.search-result-item
+              h3 Компания «ФомЛайн» на 28-й международной выставке «Мебель-2016»
+              p 23-27 ноября 2015 года в московском «Экспоцентре» на Красной Пресне состоится очередная...
+
+              .base-button-box
+                a.gui-link-button(href='#')
+                  span Подробнее
+                  i.mdi.mdi-chevron-right
+
+
+          
+          .section-box.section-box--min.typography
+            +search-section()
+          
+
+                    
+                    
+          
+     
+        +slider-three()
+
+    +footer()
+    +back-to-top()
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

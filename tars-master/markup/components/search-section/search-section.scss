@@ -1,3 +1,11 @@
+.search-result-item {
+  margin: 2rem 0;
+  
+  @include mq(sm) {
+    margin: 3rem 0;
+  }
+}
+
 .search-section {
   
   @include mq(sm) {
